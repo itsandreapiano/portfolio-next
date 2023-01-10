@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-import arrowUp from "../../../public/assets/images/arrow-up.svg";
+import arrowUp from "../../public/assets/images/arrow-up.svg";
 
 const GoTop = () => {
   const [thePosition, setThePosition] = useState(false);

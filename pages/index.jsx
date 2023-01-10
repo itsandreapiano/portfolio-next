@@ -3,7 +3,6 @@ import About from "./components/container/About";
 import Skills from "./components/container/Skills";
 import Portfolio from "./components/container/Portfolio";
 import Contact from "./components/container/Contact";
-import GoTop from "./components/container/GoTop";
 
 const Container = () => {
   return (
