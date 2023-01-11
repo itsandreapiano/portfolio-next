@@ -28,7 +28,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="container" id="work">
+    <div className="container container-portfolio" id="work">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-9, 0], opacity: 1 }}
