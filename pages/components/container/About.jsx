@@ -11,7 +11,7 @@ const About = () => {
     <div className="container " id="about">
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-5, 0], opacity: 1 }}
+        whileInView={{ y: [-9, 0], opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="title"
       >

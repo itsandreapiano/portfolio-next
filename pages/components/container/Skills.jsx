@@ -10,7 +10,7 @@ const Skills = () => {
     <div className="container" id="skills">
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-5, 0], opacity: 1 }}
+        whileInView={{ y: [-9, 0], opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="title"
       >
@@ -19,7 +19,7 @@ const Skills = () => {
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-5, 0], opacity: 1 }}
+        whileInView={{ y: [-9, 0], opacity: 1 }}
         className="select"
       >
         <button
@@ -37,7 +37,7 @@ const Skills = () => {
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-5, 0], opacity: 1 }}
+        whileInView={{ y: [-7, 0], opacity: 1 }}
         className="skills"
       >
         {active === 1 &&
@@ -51,7 +51,7 @@ const Skills = () => {
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-5, 0], opacity: 1 }}
+        whileInView={{ y: [-9, 0], opacity: 1 }}
         className="experiencs"
       >
         {active === 2 &&
@@ -69,7 +69,7 @@ const Skills = () => {
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-5, 0], opacity: 1 }}
+        whileInView={{ y: [-9, 0], opacity: 1 }}
         className="finishes_container"
       >
         {finishes.map((finish) => {
