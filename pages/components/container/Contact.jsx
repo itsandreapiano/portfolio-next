@@ -14,7 +14,8 @@ const Contact = () => {
   const [valid, setValid] = useState(false);
 
   const nameRegex = /^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/;
-  const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailRegex =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
 
   useEffect(() => {
@@ -36,7 +37,8 @@ const Contact = () => {
     <div className="container" id="contact">
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-50, 0], opacity: 1 }}
+        whileInView={{ y: [-5, 0], opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="title"
       >
         <span>get in touch</span>

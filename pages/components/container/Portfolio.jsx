@@ -31,7 +31,8 @@ const Portfolio = () => {
     <div className="container" id="work">
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-50, 0], opacity: 1 }}
+        whileInView={{ y: [-5, 0], opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="title"
       >
         <span>My Work</span>
@@ -39,7 +40,7 @@ const Portfolio = () => {
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-50, 0], opacity: 1 }}
+        whileInView={{ y: [-5, 0], opacity: 1 }}
         className="buttons"
       >
         {workNavs.map((workNav, index) => {

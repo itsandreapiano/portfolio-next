@@ -11,7 +11,8 @@ const About = () => {
     <div className="container " id="about">
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ y: [-50, 0], opacity: 1 }}
+        whileInView={{ y: [-5, 0], opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="title"
       >
         <span>Who Am I?</span>
@@ -20,8 +21,9 @@ const About = () => {
 
       <div className="about_container">
         <motion.div
+          exitBeforeEnter
           initial={{ x: 0, opacity: 0 }}
-          whileInView={{ x: [-250, 0], opacity: 1 }}
+          whileInView={{ x: [-225, 0], opacity: 1 }}
           transition={{ duration: 1 }}
           className="about_left"
         >
@@ -36,7 +38,7 @@ const About = () => {
         <motion.div
           className="about_right"
           initial={{ x: 0, opacity: 0 }}
-          whileInView={{ x: [250, 0], opacity: 1 }}
+          whileInView={{ x: [225, 0], opacity: 1 }}
           transition={{ duration: 1 }}
         >
           <p>
