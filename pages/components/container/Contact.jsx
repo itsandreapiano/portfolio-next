@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import toast, { Toaster } from 'react-hot-toast';
+
 // import "./Contact.scss";
 import { contacts } from "../../Data";
 import { socialIcons } from "../../Data";
@@ -32,6 +34,112 @@ const Contact = () => {
       setValid(true);
     } else setValid(false);
   }, [firstName, lastName, email, phone, message]);
+
+  const clean = () => {
+    setFirstName("");
+    setLastName("");
+    setPhone("");
+    setEmail("");
+    setMessage("");
+  }
+
+
+
+  const sendEmail = ()=> {    
+
+    setValid(true);
+
+    const greetingsEmail =  {
+            from: email,
+            type: "greetings",
+            subject: "Thank you for contacting me",
+            preheader: "Thank you for contacting me",
+            greetings: `Dear ${firstName} ${lastName},`,
+            message: "Thank you for contacting me! I will review your request and will be in touch within few days. </br> n\
+                      In the meantime, make sure you follow me on LinkedIn (link below), to stay updated with my personal life, creations and career achievements. </br> n\
+                      </br> n\
+                      Met vriendelijke groet, </br> n\
+                      Andrea Piano - An Italian Front-end Developer",
+            callToAction: {
+              name: "Andrea Piano - An Italian Front-end Developer",
+              href: "https://ateyapayo.app",
+              active: true,
+            },
+            conclusion: "",
+            thanks: "",
+            unsubscribe: {
+              name: "Unsubscribe",
+              href: "http://localhost:3000/",
+              message: "Don&apos;t like these emails?",
+              active: false,
+            },
+            footer: {
+              name: "Powered by",
+              href: "www.ateyapayo.app",
+              message: "ateyapayo.app",
+              active: true,
+            },
+    }
+
+    const summaryEmail = {
+        from: email,
+        type: "summary",
+        subject: "Congratulations, you got a new contact",
+        preheader: "Congratulations, you got a new contact",
+        greetings: `Yo Andrea, <strong>${firstName} >${lastName}</strong> sent you a message:`,
+        message: `<i>${message}</i>`,
+        callToAction: {
+          name: "",
+          href: "https://devben.app",
+          active: false,
+        },
+        conclusion: `You can contact <strong>${firstName}</strong> at the email: <strong>${email}</strong><br />
+                    while his phone number is: <i>${phone}</i>`,
+        thanks: "Thanks!",
+        unsubscribe: {
+          name: "Unsubscribe",
+          href: "http://localhost:3000/",
+          message: "Don&apos;t like these emails?",
+          active: false,
+        },
+        footer: {
+          name: "Powered by",
+          href: "www.ateyapayo.app",
+          message: "ateyapayo.app",
+          active: true,
+        },
+    }
+
+    const emails = {
+        data:[greetingsEmail,summaryEmail]
+    }
+
+    fetch('/api/email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(emails),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            toast.success("Your email has been succesfully sent.");
+            setDisabled(false);
+            clean();
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            toast.error(JSON.stringify(err.message));
+            setDisabled(false);
+            clean();
+        });
+
+};
+
+
+
+
+
 
   return (
     <div className="container" id="contact">
@@ -136,11 +244,12 @@ const Contact = () => {
               transition={{ duration: 0.3 }}
               className="btn"
             >
-              <a href="#">Send</a>
+              <a onClick={()=>sendEmail()}>Send</a>
             </motion.div>
           )}
         </motion.div>
       </div>
+      <Toaster position="top-right" reverseOrder={false}/>
     </div>
   );
 };
