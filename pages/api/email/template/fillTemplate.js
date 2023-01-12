@@ -34,7 +34,7 @@ const fillTemplate = (data) => {
 
   switch (options?.type) {
     case "greetings":
-        return `
+      return `
         <!doctype html>
         <html>
         <head>
@@ -178,7 +178,7 @@ const fillTemplate = (data) => {
             }
         
             a {
-                color: #3498db;
+                color: #0e76a8;
                 text-decoration: underline; 
             }
         
@@ -186,10 +186,12 @@ const fillTemplate = (data) => {
                 BUTTONS
             ------------------------------------- */
             .btn {
+                margin-top: 2em;
                 box-sizing: border-box;
                 width: 100%; }
                 .btn > tbody > tr > td {
-                padding-bottom: 15px; }
+                padding-bottom: 0; 
+            }
                 .btn table {
                 width: auto; 
             }
@@ -200,10 +202,10 @@ const fillTemplate = (data) => {
             }
                 .btn a {
                 background-color: #ffffff;
-                border: solid 1px #3498db;
+                border: solid 1px #0e76a8;
                 border-radius: 5px;
                 box-sizing: border-box;
-                color: #3498db;
+                color: #0e76a8;
                 cursor: pointer;
                 display: inline-block;
                 font-size: 14px;
@@ -215,12 +217,12 @@ const fillTemplate = (data) => {
             }
         
             .btn-primary table td {
-                background-color: #3498db; 
+                background-color: #0e76a8; 
             }
         
             .btn-primary a {
-                background-color: #3498db;
-                border-color: #3498db;
+                background-color: #0e76a8;
+                border-color: #0e76a8;
                 color: #ffffff; 
             }
         
@@ -392,10 +394,9 @@ const fillTemplate = (data) => {
                                     <tbody>
                                         
                                         ${
-                                          options?.callToAction &&
-                                          options?.callToAction
-                                            ?.active &&
-                                          `<tr>
+                                          (options?.callToAction &&
+                                            options?.callToAction?.active &&
+                                            `<tr>
                                                 <td align="left">
                                                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                                         <tbody>
@@ -405,7 +406,8 @@ const fillTemplate = (data) => {
                                                         </tbody>
                                                     </table>
                                                 </td>
-                                            </tr>` || ''
+                                            </tr>`) ||
+                                          ""
                                         }
                                         
                                     </tbody>
@@ -426,23 +428,25 @@ const fillTemplate = (data) => {
                     <div class="footer">
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                             ${
-                              options?.unsubscribe &&
-                              options?.unsubscribe?.active &&
-                              `<tr>
+                              (options?.unsubscribe &&
+                                options?.unsubscribe?.active &&
+                                `<tr>
                                     <td class="content-block">
                                         <span class="apple-link"></span>
                                         <br> ${options?.unsubscribe?.message} <a href=${options?.unsubscribe?.href}>${options?.unsubscribe?.name}</a>.
                                     </td>
-                                </tr>` || ''
+                                </tr>`) ||
+                              ""
                             }
                             ${
-                              options?.footer &&
-                              options?.footer?.active &&
-                              `<tr>
+                              (options?.footer &&
+                                options?.footer?.active &&
+                                `<tr>
                                     <td class="content-block powered-by">
-                                        ${options?.footer?.name} <a href=${options?.footer?.href}>${options?.footer?.message}</a>.
+                                        ${options?.footer?.name} <a>${options?.footer?.message}</a>.
                                     </td>
-                                </tr>` || ''
+                                </tr>`) ||
+                              ""
                             }
                         </table>
                     </div>
@@ -459,7 +463,7 @@ const fillTemplate = (data) => {
         `;
 
     case "summary":
-        return `
+      return `
         <!doctype html>
         <html>
         <head>
@@ -603,7 +607,7 @@ const fillTemplate = (data) => {
             }
         
             a {
-                color: #3498db;
+                color: #0e76a8;
                 text-decoration: underline; 
             }
         
@@ -625,10 +629,10 @@ const fillTemplate = (data) => {
             }
                 .btn a {
                 background-color: #ffffff;
-                border: solid 1px #3498db;
+                border: solid 1px #0e76a8;
                 border-radius: 5px;
                 box-sizing: border-box;
-                color: #3498db;
+                color: #0e76a8;
                 cursor: pointer;
                 display: inline-block;
                 font-size: 14px;
@@ -640,12 +644,12 @@ const fillTemplate = (data) => {
             }
         
             .btn-primary table td {
-                background-color: #3498db; 
+                background-color: #0e76a8; 
             }
         
             .btn-primary a {
-                background-color: #3498db;
-                border-color: #3498db;
+                background-color: #0e76a8;
+                border-color: #0e76a8;
                 color: #ffffff; 
             }
         
@@ -817,10 +821,9 @@ const fillTemplate = (data) => {
                                     <tbody>
                                         
                                         ${
-                                          options?.callToAction &&
-                                          options?.callToAction
-                                            ?.active &&
-                                          `<tr>
+                                          (options?.callToAction &&
+                                            options?.callToAction?.active &&
+                                            `<tr>
                                                 <td align="left">
                                                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                                         <tbody>
@@ -830,7 +833,8 @@ const fillTemplate = (data) => {
                                                         </tbody>
                                                     </table>
                                                 </td>
-                                            </tr>` || ''
+                                            </tr>`) ||
+                                          ""
                                         }
                                         
                                     </tbody>
@@ -851,23 +855,25 @@ const fillTemplate = (data) => {
                     <div class="footer">
                         <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                             ${
-                              options?.unsubscribe &&
-                              options?.unsubscribe?.active &&
-                              `<tr>
+                              (options?.unsubscribe &&
+                                options?.unsubscribe?.active &&
+                                `<tr>
                                     <td class="content-block">
                                         <span class="apple-link"></span>
                                         <br> ${options?.unsubscribe?.message} <a href=${options?.unsubscribe?.href}>${options?.unsubscribe?.name}</a>.
                                     </td>
-                                </tr>` || ''
+                                </tr>`) ||
+                              ""
                             }
                             ${
-                              options?.footer &&
-                              options?.footer?.active &&
-                              `<tr>
+                              (options?.footer &&
+                                options?.footer?.active &&
+                                `<tr>
                                     <td class="content-block powered-by">
                                         ${options?.footer?.name} <a href=${options?.footer?.href}>${options?.footer?.message}</a>.
                                     </td>
-                                </tr>` || ''
+                                </tr>`) ||
+                              ""
                             }
                         </table>
                     </div>
@@ -883,7 +889,7 @@ const fillTemplate = (data) => {
     
         `;
     default:
-        return `
+      return `
                 <!doctype html>
                 <html>
                 <head>
@@ -1027,7 +1033,7 @@ const fillTemplate = (data) => {
                     }
                 
                     a {
-                        color: #3498db;
+                        color: #0e76a8;
                         text-decoration: underline; 
                     }
                 
@@ -1049,10 +1055,10 @@ const fillTemplate = (data) => {
                     }
                         .btn a {
                         background-color: #ffffff;
-                        border: solid 1px #3498db;
+                        border: solid 1px #0e76a8;
                         border-radius: 5px;
                         box-sizing: border-box;
-                        color: #3498db;
+                        color: #0e76a8;
                         cursor: pointer;
                         display: inline-block;
                         font-size: 14px;
@@ -1064,12 +1070,12 @@ const fillTemplate = (data) => {
                     }
                 
                     .btn-primary table td {
-                        background-color: #3498db; 
+                        background-color: #0e76a8; 
                     }
                 
                     .btn-primary a {
-                        background-color: #3498db;
-                        border-color: #3498db;
+                        background-color: #0e76a8;
+                        border-color: #0e76a8;
                         color: #ffffff; 
                     }
                 
@@ -1241,10 +1247,10 @@ const fillTemplate = (data) => {
                                             <tbody>
                                                 
                                                 ${
-                                                  options?.callToAction &&
-                                                  options?.callToAction
-                                                    ?.active &&
-                                                  `<tr>
+                                                  (options?.callToAction &&
+                                                    options?.callToAction
+                                                      ?.active &&
+                                                    `<tr>
                                                         <td align="left">
                                                             <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                                                 <tbody>
@@ -1254,7 +1260,8 @@ const fillTemplate = (data) => {
                                                                 </tbody>
                                                             </table>
                                                         </td>
-                                                    </tr>` || ''
+                                                    </tr>`) ||
+                                                  ""
                                                 }
                                                 
                                             </tbody>
@@ -1275,23 +1282,25 @@ const fillTemplate = (data) => {
                             <div class="footer">
                                 <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                     ${
-                                      options?.unsubscribe &&
-                                      options?.unsubscribe?.active &&
-                                      `<tr>
+                                      (options?.unsubscribe &&
+                                        options?.unsubscribe?.active &&
+                                        `<tr>
                                             <td class="content-block">
                                                 <span class="apple-link"></span>
                                                 <br> ${options?.unsubscribe?.message} <a href=${options?.unsubscribe?.href}>${options?.unsubscribe?.name}</a>.
                                             </td>
-                                        </tr>` || ''
+                                        </tr>`) ||
+                                      ""
                                     }
                                     ${
-                                      options?.footer &&
-                                      options?.footer?.active &&
-                                      `<tr>
+                                      (options?.footer &&
+                                        options?.footer?.active &&
+                                        `<tr>
                                             <td class="content-block powered-by">
                                                 ${options?.footer?.name} <a href=${options?.footer?.href}>${options?.footer?.message}</a>.
                                             </td>
-                                        </tr>` || ''
+                                        </tr>`) ||
+                                      ""
                                     }
                                 </table>
                             </div>

@@ -52,7 +52,12 @@ const Navbar = () => {
       <div className="Nav_container">
         <div className="logo">
           <Link href="/">
-            <Image width="40" src={reactLogo} />
+            <Image
+              width="40"
+              height="40"
+              src={reactLogo}
+              alt="React logo spinner"
+            />
           </Link>
         </div>
         <ul className="nav_links">

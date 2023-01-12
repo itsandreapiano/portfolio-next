@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import toast, { Toaster } from 'react-hot-toast';
+import Image from "next/image";
+import toast, { Toaster } from "react-hot-toast";
 
 // import "./Contact.scss";
 import { contacts } from "../../Data";
+import success from "../../../public/assets/images/success.svg";
 import { socialIcons } from "../../Data";
 import { motion } from "framer-motion";
 
@@ -14,10 +16,10 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const [valid, setValid] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   const nameRegex = /^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/;
-  const emailRegex =
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
 
   useEffect(() => {
@@ -41,105 +43,91 @@ const Contact = () => {
     setPhone("");
     setEmail("");
     setMessage("");
-  }
+  };
 
-
-
-  const sendEmail = ()=> {    
-
+  const sendEmail = () => {
     setValid(true);
 
-    const greetingsEmail =  {
-            from: email,
-            type: "greetings",
-            subject: "Thank you for contacting me",
-            preheader: "Thank you for contacting me",
-            greetings: `Dear ${firstName} ${lastName},`,
-            message: "Thank you for contacting me! I will review your request and will be in touch within few days. </br> n\
-                      In the meantime, make sure you follow me on LinkedIn (link below), to stay updated with my personal life, creations and career achievements. </br> n\
-                      </br> n\
-                      Met vriendelijke groet, </br> n\
-                      Andrea Piano - An Italian Front-end Developer",
-            callToAction: {
-              name: "Andrea Piano - An Italian Front-end Developer",
-              href: "https://ateyapayo.app",
-              active: true,
-            },
-            conclusion: "",
-            thanks: "",
-            unsubscribe: {
-              name: "Unsubscribe",
-              href: "http://localhost:3000/",
-              message: "Don&apos;t like these emails?",
-              active: false,
-            },
-            footer: {
-              name: "Powered by",
-              href: "www.ateyapayo.app",
-              message: "ateyapayo.app",
-              active: true,
-            },
-    }
+    const greetingsEmail = {
+      from: email,
+      type: "greetings",
+      subject: "Thank you for contacting me",
+      preheader: "Thank you for contacting me",
+      greetings: `Dear ${firstName} ${lastName},`,
+      message:
+        "Thank you for contacting me! I will review your request and will be in touch within few days. </br> In the meantime, make sure you follow me on <b>LinkedIn</b> (link below), to stay updated with my personal life, creations and career achievements. </br> </br> Met vriendelijke groet, </br> Andrea Piano",
+      callToAction: {
+        name: "Follow me on LinkedIn",
+        href: "https://www.linkedin.com/in/andreapiano/",
+        active: true,
+      },
+      conclusion: "",
+      thanks: "",
+      unsubscribe: {
+        name: "Unsubscribe",
+        href: "http://localhost:3000/",
+        message: "Don&apos;t like these emails?",
+        active: false,
+      },
+      footer: {
+        name: "Powered by",
+        href: "www.ateyapayo.app",
+        message: "ateyapayo.app",
+        active: true,
+      },
+    };
 
     const summaryEmail = {
-        from: email,
-        type: "summary",
-        subject: "Congratulations, you got a new contact",
-        preheader: "Congratulations, you got a new contact",
-        greetings: `Yo Andrea, <strong>${firstName} >${lastName}</strong> sent you a message:`,
-        message: `<i>${message}</i>`,
-        callToAction: {
-          name: "",
-          href: "https://devben.app",
-          active: false,
-        },
-        conclusion: `You can contact <strong>${firstName}</strong> at the email: <strong>${email}</strong><br />
-                    while his phone number is: <i>${phone}</i>`,
-        thanks: "Thanks!",
-        unsubscribe: {
-          name: "Unsubscribe",
-          href: "http://localhost:3000/",
-          message: "Don&apos;t like these emails?",
-          active: false,
-        },
-        footer: {
-          name: "Powered by",
-          href: "www.ateyapayo.app",
-          message: "ateyapayo.app",
-          active: true,
-        },
-    }
+      from: email,
+      type: "summary",
+      subject: "Congratulations Andrea, you've got a new request!",
+      preheader: "Congratulations Andrea, you've got a new request!",
+      greetings: `Hey Andrea, <strong>${firstName} ${lastName}</strong> sent you a message:`,
+      message: `<i>${message}</i>`,
+      callToAction: {
+        name: "",
+        href: "https://ateyapayo.app",
+        active: false,
+      },
+      conclusion: `You can contact <strong>${firstName}</strong> at the email: <strong>${email}</strong>.<br />
+                    In case you needed it, their phone number is: <i>${phone}</i>`,
+      thanks: "Cheers!",
+      unsubscribe: {
+        name: "Unsubscribe",
+        href: "http://localhost:3000/",
+        message: "Don&apos;t like these emails?",
+        active: false,
+      },
+      footer: {
+        name: "Powered by",
+        href: "www.ateyapayo.app",
+        message: "ateyapayo.app",
+        active: true,
+      },
+    };
 
     const emails = {
-        data:[greetingsEmail,summaryEmail]
-    }
+      data: [greetingsEmail, summaryEmail],
+    };
 
-    fetch('/api/email', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(emails),
-        })
-        .then((response) => response.json())
-        .then((data) => {
-            toast.success("Your email has been succesfully sent.");
-            setDisabled(false);
-            clean();
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            toast.error(JSON.stringify(err.message));
-            setDisabled(false);
-            clean();
-        });
-
-};
-
-
-
-
-
+    fetch("/api/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(emails),
+    })
+      .then((response) => response.json())
+      .then(() => {
+        setEmailSent(true);
+        clean();
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        toast.error(JSON.stringify("Whoops, something went wrong! Try again."));
+        clean();
+      });
+  };
 
   return (
     <div className="container" id="contact">
@@ -187,56 +175,79 @@ const Contact = () => {
           transition={{ duration: 1 }}
           className="contact_right"
         >
-          <h3>Get In Touch</h3>
-          <div className="row">
-            <input
-              type="text"
-              onChange={(e) => setFirstName(e.target.value)}
-              placeholder="First Name"
-            />
-            <input
-              type="text"
-              onChange={(e) => setLastName(e.target.value)}
-              placeholder="Last name"
-            />
-          </div>
-          <div className="row">
-            <input
-              type="text"
-              onChange={(e) => setPhone(e.target.value)}
-              placeholder="Phone"
-            />
-            <input
-              type="email"
-              autoComplete="off"
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email"
-            />
-          </div>
-          <div className="row">
-            <textarea
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="message"
-            ></textarea>
-          </div>
-          {(!nameRegex.test(firstName) ||
-            firstName.length < 2 ||
-            !nameRegex.test(lastName) ||
-            lastName.length < 2 ||
-            phone.length < 5 ||
-            !phoneRegex.test(phone) ||
-            !emailRegex.test(email) ||
-            message.length < 1) && (
-            <div>
-              <span className="invalid-message">
-                Please fill out all the fields.
-              </span>
+          {emailSent && (
+            <div className="email-sent">
+              <h1>
+                Thank you for your message! <br /> You'll receive an email as a
+                confirmation soon.
+              </h1>
+              <div className="success-container">
+                <Image
+                  className="success-img"
+                  src={success}
+                  width={100}
+                  height={100}
+                  alt="Successful feedback image"
+                />
+              </div>
             </div>
           )}
-          {!valid && (
-            <button className="btn-disabled" disabled>
-              Send
-            </button>
+          {!emailSent && (
+            <>
+              <h3>Get In Touch</h3>
+
+              <div className="row">
+                <input
+                  type="text"
+                  onChange={(e) => setFirstName(e.target.value)}
+                  placeholder="First Name"
+                />
+                <input
+                  type="text"
+                  onChange={(e) => setLastName(e.target.value)}
+                  placeholder="Last name"
+                />
+              </div>
+              <div className="row">
+                <input
+                  type="text"
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="Phone"
+                />
+                <input
+                  type="email"
+                  autoComplete="off"
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                />
+              </div>
+              <div className="row">
+                <textarea
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="message"
+                ></textarea>
+              </div>
+
+              {(!nameRegex.test(firstName) ||
+                firstName.length < 2 ||
+                !nameRegex.test(lastName) ||
+                lastName.length < 2 ||
+                phone.length < 5 ||
+                !phoneRegex.test(phone) ||
+                !emailRegex.test(email) ||
+                message.length < 1) && (
+                <div>
+                  <span className="invalid-message">
+                    Please fill out all the fields.
+                  </span>
+                </div>
+              )}
+              {!valid && (
+                <button className="btn-disabled" disabled>
+                  Send
+                </button>
+              )}
+            </>
           )}
           {valid && (
             <motion.div
@@ -244,12 +255,12 @@ const Contact = () => {
               transition={{ duration: 0.3 }}
               className="btn"
             >
-              <a onClick={()=>sendEmail()}>Send</a>
+              <a onClick={() => sendEmail()}>Send</a>
             </motion.div>
           )}
         </motion.div>
       </div>
-      <Toaster position="top-right" reverseOrder={false}/>
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 };

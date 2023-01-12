@@ -26,7 +26,13 @@ const GoTop = () => {
   return (
     (thePosition && (
       <div className="go-top">
-        <Image src={arrowUp} onClick={() => scrollToTop()} width="53" />
+        <Image
+          priority
+          src={arrowUp}
+          onClick={() => scrollToTop()}
+          width="53"
+          alt="Go top button"
+        />
       </div>
     )) || <></>
   );

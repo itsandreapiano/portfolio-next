@@ -698,6 +698,16 @@ img {
     color: #d93125;
   }
 
+  .success-container {
+    display: flex;
+    justify-content: center;
+    .success-img {
+      margin-top: 2.2em;
+      width: 30%;
+      height: 30%;
+    }
+  }
+
   @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
   }

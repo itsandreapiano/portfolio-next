@@ -28,7 +28,7 @@ const Home = () => {
       }}
     >
       <div className="profile">
-        <Image src={avatar} alt="avatar" />
+        <Image src={avatar} alt="Andrea Piano's picture" />
       </div>
       <div className="profile_text">
         <h3 className="name">

@@ -671,6 +671,15 @@ img {
   font-size: 13px;
   color: #d93125;
 }
+.contact_form .success-container {
+  display: flex;
+  justify-content: center;
+}
+.contact_form .success-container .success-img {
+  margin-top: 2.2em;
+  width: 30%;
+  height: 30%;
+}
 @media screen and (max-width: 700px) {
   .contact_form {
     grid-template-columns: 1fr;
@@ -768,6 +777,7 @@ img {
 }
 .contact_form .contact_right a {
   text-decoration: none;
+  cursor: pointer;
   color: #fff;
   text-transform: capitalize;
 }

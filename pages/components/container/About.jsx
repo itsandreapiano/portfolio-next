@@ -21,7 +21,6 @@ const About = () => {
 
       <div className="about_container">
         <motion.div
-          exitBeforeEnter
           initial={{ x: 0, opacity: 0 }}
           whileInView={{ x: [-225, 0], opacity: 1 }}
           transition={{ duration: 1 }}
@@ -32,7 +31,7 @@ const About = () => {
             transition={{ duration: 0.3 }}
             className="motion-div"
           >
-            <Image src={avatar} />
+            <Image src={avatar} alt="Andrea Piano's picture" />
           </motion.div>
         </motion.div>
         <motion.div
