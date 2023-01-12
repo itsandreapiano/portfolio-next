@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   const [active, setActive] = useState(1);
   return (
-    <div className="container" id="skills">
+    <div className="container skills-container" id="skills">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-9, 0], opacity: 1 }}

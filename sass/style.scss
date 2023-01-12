@@ -422,6 +422,13 @@ img {
 
 // Skills
 
+.skills-container {
+  padding-top: 4em;
+  @media screen and (max-width: 500px) {
+    padding-top: 6em;
+  }
+}
+
 .select {
   display: flex;
   justify-content: center;
@@ -446,6 +453,7 @@ img {
     }
   }
 }
+
 .skills {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

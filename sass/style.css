@@ -407,6 +407,15 @@ img {
   width: 165px;
 }
 
+.skills-container {
+  padding-top: 4em;
+}
+@media screen and (max-width: 500px) {
+  .skills-container {
+    padding-top: 6em;
+  }
+}
+
 .select {
   display: flex;
   justify-content: center;
