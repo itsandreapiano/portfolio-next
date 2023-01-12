@@ -71,7 +71,7 @@ const About = () => {
           })}
           <motion.a
             href="../../../assets/CV-Andrea-Piano.pdf"
-            download="../../../assets/CV-Andrea-Piano.pdf"
+            download="CV-Andrea-Piano"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           >
