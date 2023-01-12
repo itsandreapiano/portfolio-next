@@ -55,7 +55,7 @@ const Contact = () => {
       preheader: "Thank you for contacting me",
       greetings: `Dear ${firstName} ${lastName},`,
       message:
-        "Thank you for contacting me! I will review your request and will be in touch within few days. </br> In the meantime, make sure you follow me on <b>LinkedIn</b> (link below), to stay updated with my personal life, creations and career achievements. </br> </br> Met vriendelijke groet, </br> Andrea Piano",
+        "Thank you for contacting me! I will review your request and will be in touch within a few days. </br> In the meantime, make sure you follow me on <b>LinkedIn</b> (link below), to stay updated with my personal life, creations and career achievements. </br> </br> Met vriendelijke groet, </br> Andrea Piano",
       callToAction: {
         name: "Follow me on LinkedIn",
         href: "https://www.linkedin.com/in/andreapiano/",
@@ -178,8 +178,8 @@ const Contact = () => {
           {emailSent && (
             <div className="email-sent">
               <h1>
-                Thank you for your message! <br /> You'll receive an email as a
-                confirmation soon.
+                Thank you for your message! <br /> You'll receive a confirmation
+                email soon.
               </h1>
               <div className="success-container">
                 <Image
