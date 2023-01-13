@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 // import "./Portfolio.scss";
 import { workNavs } from "../../Data";
 import { workImages } from "../../Data";
@@ -64,6 +65,7 @@ const Portfolio = () => {
       >
         {works.map((work) => {
           return (
+            <Link target="_blank" href={work.link} className="link-project">
             <div className="workImage" key={work.id}>
               <Image src={work.img} alt={work.id} />
               <motion.div
@@ -93,6 +95,7 @@ const Portfolio = () => {
                 </motion.a>
               </motion.div>
             </div>
+            </Link>
           );
         })}
       </motion.div>
@@ -107,13 +110,14 @@ const Portfolio = () => {
             so let's talk about <br /> <span>your ideal candidate</span>
           </h3>
         </div>
-        <motion.div
+        <motion.a
           whileHover={{ scale: 1.1 }}
           transition={{ duration: 0.3 }}
           className="talk_right"
+          href="#contact"
         >
-          <a href="#contact">Hire Me</a>
-        </motion.div>
+         Hire Me
+        </motion.a>
       </motion.div>
     </div>
   );

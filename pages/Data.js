@@ -58,7 +58,7 @@ export const bios = [
     id: 3,
     icon: <FaPaperPlane />,
     key: "Email",
-    value: "andreapiano1992@gmail.com",
+    value: "dev.andrea.piano@gmail.com",
   },
 ];
 
@@ -183,7 +183,7 @@ export const contacts = [
   {
     id: 2,
     icon: <FaPaperPlane />,
-    infoText: "andreapiano1992@gmail.com",
+    infoText: "dev.andrea.piano@gmail.com",
   },
   {
     id: 3,

@@ -12,10 +12,10 @@ const Layout = ({ children }) => {
         <meta
           name="description"
           content="Andrea Piano's portfolio - an Italian Front-end Developer.
-          Developed by using ReactJS, NextJS 13 & Framer Motion."
+          Developed by using NextJS 13, ReactJS & Framer Motion."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <div className="body">
         <Nav />

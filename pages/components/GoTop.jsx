@@ -28,6 +28,7 @@ const GoTop = () => {
       <div className="go-top">
         <Image
           priority
+          className="go-top-btn"
           src={arrowUp}
           onClick={() => scrollToTop()}
           width="53"

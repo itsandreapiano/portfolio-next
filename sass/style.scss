@@ -102,6 +102,8 @@ img {
       transition-timing-function: ease;
       transition-delay: 0s;
       transition-property: transform;
+      display: flex;
+      align-self: center;
     }
 
     img:hover {
@@ -118,6 +120,8 @@ img {
       margin-left: 1rem;
 
       svg {
+        display: flex;
+        align-self: center;
         cursor: pointer;
         color: #fff;
         opacity: 0.6;
@@ -561,6 +565,11 @@ img {
     }
   }
 }
+
+.link-project {
+  cursor: default;
+}
+
 .workImages {
   margin-top: 5rem;
   display: grid;
@@ -669,13 +678,10 @@ img {
     padding: 0.65rem 1rem;
     border-radius: 10px;
     font-size: 0.85rem;
-
-    a {
-      text-decoration: none;
-      color: #fff;
-      text-transform: capitalize;
-      cursor: pointer;
-    }
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
   }
 }
 
@@ -695,6 +701,11 @@ img {
 
   a {
     color: #000;
+  }
+
+  .btn-send {
+    cursor: pointer;
+    color: #fff;
   }
 
   .invalid-input {
@@ -831,7 +842,12 @@ img {
 // Go Top
 
 .go-top {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56.5px;
+  height: 56.5px;
+  background-color: #000;
   cursor: pointer;
   position: fixed;
   border: none;
@@ -839,6 +855,11 @@ img {
   bottom: 11vh;
   right: 4.5vw;
   z-index: 9999;
+
+  .go-top-btn {
+    display: flex;
+    align-self: center;
+  }
 }
 
 // Footer
