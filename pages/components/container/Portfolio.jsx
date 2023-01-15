@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // import "./Portfolio.scss";
-import { workNavs } from "../../Data";
-import { workImages } from "../../Data";
+import { workNavs } from "../../api/datafetch/Data";
+import { workImages } from "../../api/datafetch/Data";
 import { FiGithub, FiEye } from "react-icons/fi";
 import { motion } from "framer-motion";
 
@@ -66,35 +66,35 @@ const Portfolio = () => {
         {works.map((work) => {
           return (
             <Link target="_blank" href={work.link} className="link-project">
-            <div className="workImage" key={work.id}>
-              <Image src={work.img} alt={work.id} />
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: [0, 1] }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="hoverLayer"
-              >
-                <motion.a
-                  target="_blank"
-                  href={work.code}
-                  whileInView={{ scale: [0, 1] }}
-                  whileHover={{ scale: [1, 1.1] }}
-                  transition={{ duration: 0.3 }}
+              <div className="workImage" key={work.id}>
+                <Image src={work.img} alt={work.id} />
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: [0, 1] }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="hoverLayer"
                 >
-                  <FiGithub title="See code" />
-                </motion.a>
+                  <motion.a
+                    target="_blank"
+                    href={work.code}
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 1.1] }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FiGithub title="See code" />
+                  </motion.a>
 
-                <motion.a
-                  target="_blank"
-                  href={work.link}
-                  whileInView={{ scale: [0, 1] }}
-                  whileHover={{ scale: [1, 1.1] }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <FiEye title="See project" />
-                </motion.a>
-              </motion.div>
-            </div>
+                  <motion.a
+                    target="_blank"
+                    href={work.link}
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 1.1] }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FiEye title="See project" />
+                  </motion.a>
+                </motion.div>
+              </div>
             </Link>
           );
         })}
@@ -116,7 +116,7 @@ const Portfolio = () => {
           className="talk_right"
           href="#contact"
         >
-         Hire Me
+          Hire Me
         </motion.a>
       </motion.div>
     </div>

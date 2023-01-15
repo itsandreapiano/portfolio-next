@@ -3,8 +3,8 @@ import Image from "next/image";
 // import "./Navbar.scss";
 import { motion } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-import { navLinks } from "../Data";
-import { socialIcons } from "../Data";
+import { navLinks } from "../../pages/api/datafetch/Data";
+import { socialIcons } from "../../pages/api/datafetch/Data";
 import reactLogo from "../../public/assets/images/react-logo.svg";
 import Link from "next/link";
 

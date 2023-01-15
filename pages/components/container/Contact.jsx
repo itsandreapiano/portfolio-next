@@ -3,9 +3,9 @@ import Image from "next/image";
 import toast, { Toaster } from "react-hot-toast";
 
 // import "./Contact.scss";
-import { contacts } from "../../Data";
+import { contacts } from "../../api/datafetch/Data";
 import success from "../../../public/assets/images/success.svg";
-import { socialIcons } from "../../Data";
+import { socialIcons } from "../../api/datafetch/Data";
 import { motion } from "framer-motion";
 
 const Contact = () => {

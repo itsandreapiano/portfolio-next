@@ -17,12 +17,12 @@ import {
 import Link from "next/link";
 import { DiJavascript } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
-import netflixList from "../public/assets/images/netflix.png";
-import ladyKiron from "../public/assets/images/ladykiron.png";
-import ecoEvents from "../public/assets/images/eco-events-vue-form.png";
-import memeGenerator from "../public/assets/images/meme-generator.png";
-import airBnb from "../public/assets/images/airbnb.png";
-import workshop from "../public/assets/images/photography-workshop.png";
+import netflixList from "../../../public/assets/images/netflix.png";
+import ladyKiron from "../../../public/assets/images/ladykiron.png";
+import ecoEvents from "../../../public/assets/images/eco-events-vue-form.png";
+import memeGenerator from "../../../public/assets/images/meme-generator.png";
+import airBnb from "../../../public/assets/images/airbnb.png";
+import workshop from "../../../public/assets/images/photography-workshop.png";
 
 export const navLinks = ["home", "about", "skills", "work", "contact"];
 

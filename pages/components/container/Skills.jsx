@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import "./Skills.scss";
-import { icons } from "../../Data";
-import { experiences } from "../../Data";
-import { finishes } from "../../Data";
+import { icons } from "../../api/datafetch/Data";
+import { experiences } from "../../api/datafetch/Data";
+import { finishes } from "../../api/datafetch/Data";
 import { motion } from "framer-motion";
 const Skills = () => {
   const [active, setActive] = useState(1);

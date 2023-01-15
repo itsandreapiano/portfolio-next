@@ -2,7 +2,7 @@ import React from "react";
 // import "./About.scss";
 
 import { motion } from "framer-motion";
-import { bios } from "../../Data";
+import { bios } from "../../api/datafetch/Data";
 import avatar from "../../../public/assets/images/me.png";
 import Image from "next/image";
 
