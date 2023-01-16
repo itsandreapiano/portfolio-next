@@ -21,7 +21,7 @@ const fillTemplate = (data) => {
     },
     footer: {
       name: "Powered by",
-      href: "www.ateyapayo.app",
+      href: "www.andreapiano.dev",
       message: "ateyapayo.app",
       active: true,
     },

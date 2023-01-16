@@ -71,8 +71,8 @@ const Contact = () => {
       },
       footer: {
         name: "Powered by",
-        href: "www.ateyapayo.app",
-        message: "ateyapayo.app",
+        href: "www.andreapiano.dev",
+        message: "andreapiano.dev",
         active: true,
       },
     };
@@ -100,8 +100,8 @@ const Contact = () => {
       },
       footer: {
         name: "Powered by",
-        href: "www.ateyapayo.app",
-        message: "ateyapayo.app",
+        href: "www.andreapiano.dev",
+        message: "ateyapayo.dev",
         active: true,
       },
     };
