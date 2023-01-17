@@ -196,6 +196,29 @@ const Contact = () => {
             <>
               <h3>Get In Touch</h3>
 
+              {
+              (!nameRegex.test(firstName) ||
+                firstName.length < 2 ||
+                !nameRegex.test(lastName) ||
+                lastName.length < 2 ||
+                phone.length < 5 ||
+                !phoneRegex.test(phone) ||
+                !emailRegex.test(email) ||
+                message.length < 1) ? (
+                <div className="submit-message">
+                  <span className="invalid-submit">
+                    Please fill out all the fields.
+                  </span>
+                </div>
+              ) : (
+                <div className="submit-message">
+                  <span className="valid-submit">
+                    Ready to submit!
+                  </span>
+                </div>
+              )} 
+              
+
               <div className="row">
                 <input
                   type="text"
@@ -228,20 +251,7 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              {(!nameRegex.test(firstName) ||
-                firstName.length < 2 ||
-                !nameRegex.test(lastName) ||
-                lastName.length < 2 ||
-                phone.length < 5 ||
-                !phoneRegex.test(phone) ||
-                !emailRegex.test(email) ||
-                message.length < 1) && (
-                <div>
-                  <span className="invalid-message">
-                    Please fill out all the fields.
-                  </span>
-                </div>
-              )}
+
               {!valid && (
                 <button className="btn-disabled" disabled>
                   Send

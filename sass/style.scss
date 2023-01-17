@@ -742,13 +742,18 @@ img {
     color: #fff;
   }
 
-  .invalid-input {
-    background-color: #d93125bc !important;
+  .submit-message {
+    margin-bottom: .6em;
   }
 
-  .invalid-message {
+  .invalid-submit {
     font-size: 13px;
-    color: #d93125;
+    // color: #d93125;
+  }
+
+  .valid-submit {
+    font-size: 13px;
+    color: #198754;
   }
 
   .success-container {
@@ -815,7 +820,7 @@ img {
   .contact_right {
     h3 {
       font-size: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.65rem;
     }
     .row {
       width: 100%;
