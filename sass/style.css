@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,9 +13,13 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* background-color: #000; */
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+}
+@media screen and (max-width: 499px) {
+  .body {
+    background-color: #000;
+  }
 }
 
 img {
@@ -26,7 +31,7 @@ img {
   flex-direction: column;
   justify-content: center;
   max-width: 1224px;
-  min-height: 100vh;
+  min-height: 95vh;
   padding: 3.5rem 1.5rem 0 1.5rem;
   margin: 0 auto;
 }
@@ -35,10 +40,6 @@ img {
   padding-top: 7rem;
 }
 
-@font-face {
-  font-family: "Poppins";
-  src: url(./../public/Font/Poppins-Medium.ttf);
-}
 .title {
   text-align: center;
   margin-bottom: 3rem;
@@ -60,7 +61,7 @@ img {
 
 @media screen and (max-width: 500px) {
   .container {
-    padding: 7rem 1rem 0 1rem;
+    padding: 2.5rem 1rem 0 1rem;
   }
   .title h1 {
     font-size: 2.5rem;
@@ -91,8 +92,8 @@ img {
 }
 .Nav_container .logo {
   background: transparent;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -105,6 +106,10 @@ img {
   transition-timing-function: ease;
   transition-delay: 0s;
   transition-property: transform;
+  display: flex;
+  align-self: center;
+  width: 35px;
+  height: 35px;
 }
 .Nav_container .logo img:hover {
   transform: rotate(180deg);
@@ -122,6 +127,8 @@ img {
   margin-left: 1rem;
 }
 .Nav_container .social_icons div svg {
+  display: flex;
+  align-self: center;
   cursor: pointer;
   color: #fff;
   opacity: 0.6;
@@ -174,19 +181,19 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 90vh;
 }
 .Nav_container .menuX svg {
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
   position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
+  top: 1.4rem;
+  right: 2.3rem;
 }
 .Nav_container .menuX li {
   list-style: none;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .Nav_container .menuX li a {
   text-decoration: none;
@@ -355,8 +362,21 @@ img {
   border-radius: 5px;
   box-shadow: 0 0 20px #0070f3;
 }
-.about_container .about_left .motion-div {
+.about_container .about_left .motion-div-desktop {
   height: 100%;
+}
+@media screen and (max-width: 499px) {
+  .about_container .about_left .motion-div-desktop {
+    display: none;
+  }
+}
+.about_container .about_left .div-mobile {
+  height: 100%;
+}
+@media screen and (min-width: 500px) {
+  .about_container .about_left .div-mobile {
+    display: none;
+  }
 }
 .about_container .about_left img {
   -o-object-fit: cover;
@@ -413,6 +433,7 @@ img {
 @media screen and (max-width: 500px) {
   .skills-container {
     padding-top: 6em;
+    padding-bottom: 4.5em;
   }
 }
 
@@ -448,7 +469,7 @@ img {
   max-width: 700px;
   row-gap: 4rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .skills {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -518,6 +539,16 @@ img {
   gap: 2rem;
   color: #fff;
 }
+@media screen and (max-width: 600px) {
+  .finishes_container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .finishes_container {
+    margin-top: 4rem;
+  }
+}
 .finishes_container .number {
   color: #0070f3;
   font-size: 1.7rem;
@@ -544,6 +575,12 @@ img {
 .buttons button.active {
   background: #0070f3;
   color: #fff;
+}
+
+.link-project {
+  margin-left: auto;
+  margin-right: auto;
+  cursor: default;
 }
 
 .workImages {
@@ -593,6 +630,11 @@ img {
   gap: 1.5rem;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 499px) {
+  .workImages .workImage .hoverLayer {
+    display: none;
+  }
 }
 .workImages .workImage .hoverLayer a {
   width: 40px;
@@ -650,8 +692,6 @@ img {
   padding: 0.65rem 1rem;
   border-radius: 10px;
   font-size: 0.85rem;
-}
-.talk .talk_right a {
   text-decoration: none;
   color: #fff;
   text-transform: capitalize;
@@ -673,12 +713,19 @@ img {
 .contact_form a {
   color: #000;
 }
-.contact_form .invalid-input {
-  background-color: rgba(217, 49, 37, 0.737254902) !important;
+.contact_form .btn-send {
+  cursor: pointer;
+  color: #fff;
 }
-.contact_form .invalid-message {
+.contact_form .submit-message {
+  margin-bottom: 0.6em;
+}
+.contact_form .invalid-submit {
   font-size: 13px;
-  color: #d93125;
+}
+.contact_form .valid-submit {
+  font-size: 13px;
+  color: #198754;
 }
 .contact_form .success-container {
   display: flex;
@@ -737,7 +784,7 @@ img {
 }
 .contact_form .contact_right h3 {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.65rem;
 }
 .contact_form .contact_right .row {
   width: 100%;
@@ -792,14 +839,24 @@ img {
 }
 
 .go-top {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #000;
+  border: none;
   cursor: pointer;
   position: fixed;
   border: none;
   border-radius: 100%;
   bottom: 11vh;
-  right: 4.5vw;
-  z-index: 9999 !important;
+  right: 7vw;
+  z-index: 9;
+}
+.go-top .go-top-btn {
+  display: flex;
+  align-self: center;
 }
 
 .footer {
