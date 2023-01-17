@@ -29,10 +29,15 @@ const About = () => {
           <motion.div
             whileHover={{ y: -48, x: -55 }}
             transition={{ duration: 0.3 }}
-            className="motion-div"
+            className="motion-div-desktop"
           >
             <Image src={avatar} alt="Andrea Piano's picture" />
           </motion.div>
+          <div
+            className="div-mobile"
+          >
+            <Image src={avatar} alt="Andrea Piano's picture" />
+          </div>
         </motion.div>
         <motion.div
           className="about_right"

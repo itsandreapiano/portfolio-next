@@ -14,7 +14,7 @@ const Skills = () => {
         transition={{ duration: 0.5 }}
         className="title"
       >
-        <span>What I Expert?</span>
+        <span>My expertise</span>
         <h1>Skills And Experience</h1>
       </motion.div>
       <motion.div

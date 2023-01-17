@@ -31,7 +31,8 @@ const GoTop = () => {
           className="go-top-btn"
           src={arrowUp}
           onClick={() => scrollToTop()}
-          width="53"
+          width="45"
+          height="45"
           alt="Go top button"
         />
       </div>

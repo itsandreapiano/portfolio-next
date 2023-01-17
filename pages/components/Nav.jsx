@@ -53,8 +53,9 @@ const Navbar = () => {
         <div className="logo">
           <Link href="/">
             <Image
-              width="40"
-              height="40"
+              className="spinner"
+              width="35"
+              height="35"
               src={reactLogo}
               alt="React logo spinner"
             />
