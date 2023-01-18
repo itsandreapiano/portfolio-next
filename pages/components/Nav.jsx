@@ -12,8 +12,6 @@ const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
 
-  console.log("THIS IS TOGGLE --> ", toggle)
-
   const menuVariants = {
     hidden: {
       scale: 0,
@@ -52,17 +50,16 @@ const Navbar = () => {
       className={scroll ? "header active" : "header"}
     >
       <div className="Nav_container">
-        <div className="logo">
-          <Link href="/">
-            <Image
-              className="spinner"
-              width="35"
-              height="35"
-              src={reactLogo}
-              alt="React logo spinner"
-            />
-          </Link>
-        </div>
+        <Link className="logo" href="/">
+          <Image
+            className="spinner"
+            width="35"
+            height="35"
+            priority
+            src={reactLogo}
+            alt="React logo spinner"
+          />
+        </Link>
         <ul className="nav_links">
           {navLinks.map((navlink, index) => {
             return (
