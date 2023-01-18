@@ -12,6 +12,8 @@ const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [toggle, setToggle] = useState(false);
 
+  console.log("THIS IS TOGGLE --> ", toggle)
+
   const menuVariants = {
     hidden: {
       scale: 0,
@@ -93,6 +95,7 @@ const Navbar = () => {
           variants={navLinkVariants}
           animate={toggle ? "visible" : "hidden"}
           className="menuX"
+          style={{visibility: (!toggle) ? "hidden" : "visible"}}
         >
           <HiX onClick={() => setToggle(false)} />
           {navLinks.map((navlink, index) => {
