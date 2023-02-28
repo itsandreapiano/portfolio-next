@@ -55,7 +55,7 @@ const Contact = () => {
       preheader: "Thank you for contacting me",
       greetings: `Dear ${firstName} ${lastName},`,
       message:
-        "Thank you for contacting me! I will review your request and will be in touch within a few days. <br> In the meantime, make sure you follow me on <b>LinkedIn</b> (link below), to stay updated with my personal life, creations and career achievements. <br> <br> Met vriendelijke groet, <br> Andrea Piano",
+        "Thank you for contacting me! I will review your request and will be in touch within a few days. <br> In the meantime, make sure you follow me on <b>LinkedIn</b> (link below), to stay updated with my personal life, creations and career achievements. <br> <br> Kind regards, <br> Andrea Piano",
       callToAction: {
         name: "Follow me on LinkedIn",
         href: "https://www.linkedin.com/in/andreapiano/",
@@ -149,7 +149,7 @@ const Contact = () => {
         >
           <h3>Contact me for a first interview</h3>
           <p className="contact_text">
-            Is your company based in The Netherlands and planning to expand one
+            Is your company based in the UK and planning to expand one
             of its Dev Teams very soon? <br />
             Well, you might have ended up on the right page, at the right time.
             <br />
