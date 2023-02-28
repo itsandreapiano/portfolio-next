@@ -34,7 +34,7 @@ const Home = () => {
         <h3 className="name">
           Hi, I'm <span className="gradient-heading">Andrea Piano</span>{" "}
         </h3>
-        <span className="job">An Italian Front-end Developer</span>
+        <span className="job">An Italian Front-end Software Developer</span>
 
         <section className="text-box">
           <span className="text">Don't worry,</span>

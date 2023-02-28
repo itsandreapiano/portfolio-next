@@ -48,7 +48,7 @@ const About = () => {
           <p>
             Heya!
             <br />
-            I'm a Front-end Developer and ReactJS lover.
+            I'm a Front-end Software Developer and ReactJS lover.
             <br />
             I have a passion for developing unique WebApps which improve
             people's lives, by creating & translating Figma mockups into

@@ -27,13 +27,25 @@ import workshop from "../../../public/assets/images/photography-workshop.png";
 export const navLinks = ["home", "about", "skills", "work", "contact"];
 
 export const socialIcons = [
-  <Link title="Facebook" target="_blank" href="https://www.facebook.com/andreapianolandia">
+  <Link
+    title="Facebook"
+    target="_blank"
+    href="https://www.facebook.com/andreapianolandia"
+  >
     <FaFacebook />
   </Link>,
-  <Link title="Instagram" target="_blank" href="https://www.instagram.com/ateyapayo">
+  <Link
+    title="Instagram"
+    target="_blank"
+    href="https://www.instagram.com/ateyapayo"
+  >
     <FaInstagram />
   </Link>,
-  <Link title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/andreapiano">
+  <Link
+    title="LinkedIn"
+    target="_blank"
+    href="https://www.linkedin.com/in/andreapiano"
+  >
     <FaLinkedin />
   </Link>,
   <Link title="GitHub" target="_blank" href="https://github.com/ateyapayo">
@@ -77,7 +89,7 @@ export const experiences = [
   {
     id: 1,
     year: "2022",
-    position: "Web & Software Developer",
+    position: "oftware Developer",
     company: "Softfobia (An Indra Company)",
   },
   {

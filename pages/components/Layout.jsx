@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         <title>Andrea Piano's Portfolio</title>
         <meta
           name="description"
-          content="Andrea Piano's portfolio - an Italian Front-end Developer.
+          content="Andrea Piano's portfolio - an Italian Front-end Software Developer.
           Developed by using NextJS 13, ReactJS & Framer Motion."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
