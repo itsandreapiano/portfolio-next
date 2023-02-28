@@ -77,7 +77,7 @@ export const experiences = [
   {
     id: 1,
     year: "2022",
-    position: "Front-end Developer",
+    position: "Web & Software Developer",
     company: "Softfobia (An Indra Company)",
   },
   {
@@ -178,7 +178,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "Europe",
+    infoText: "Italy / UK",
   },
   {
     id: 2,
