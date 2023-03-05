@@ -89,7 +89,7 @@ export const experiences = [
   {
     id: 1,
     year: "2022",
-    position: "Front-end Software Developer",
+    position: "Software Developer",
     company: "Softfobia (An Indra Company)",
   },
   {
