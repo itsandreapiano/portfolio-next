@@ -2,21 +2,19 @@ import {
   FaHtml5,
   FaCss3,
   FaReact,
-  FaSass,
   FaFigma,
+  FaGit,
   FaPhoneAlt,
   FaUser,
   FaMapMarkerAlt,
   FaPaperPlane,
   FaInstagram,
   FaLinkedin,
-  FaVuejs,
   FaFacebook,
   FaGithub,
 } from "react-icons/fa";
 import Link from "next/link";
-import { DiJavascript } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
+import { SiNextdotjs, SiTypescript, SiJavascript } from "react-icons/si";
 import netflixList from "../../../public/assets/images/netflix.png";
 import ladyKiron from "../../../public/assets/images/ladykiron.png";
 import ecoEvents from "../../../public/assets/images/eco-events-vue-form.png";
@@ -75,14 +73,14 @@ export const bios = [
 ];
 
 export const icons = [
+  <FaFigma title="Figma" />,
+  <FaGit title="Git" />,
   <FaHtml5 title="HTML5" />,
   <FaCss3 title="CSS3" />,
-  <FaSass title="SASS" />,
-  <FaFigma title="Figma" />,
-  <DiJavascript title="JavaScript" />,
+  <SiJavascript title="JavaScript" />,
   <SiTypescript title="TypeScript" />,
-  <FaReact title="React" />,
-  <FaVuejs title="VueJS" />,
+  <FaReact title="ReactJS" />,
+  <SiNextdotjs title="NextJS" />,
 ];
 
 export const experiences = [
