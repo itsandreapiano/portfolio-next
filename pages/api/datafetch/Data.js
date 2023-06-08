@@ -16,6 +16,9 @@ import {
 import Link from "next/link";
 import { SiNextdotjs, SiTypescript, SiJavascript } from "react-icons/si";
 import netflixList from "../../../public/assets/images/netflix.png";
+import nextflix from "../../../public/assets/images/nextflix.png";
+import greenpeace from "../../../public/assets/images/greenpeace.png";
+import ras from "../../../public/assets/images/ras.png";
 import ladyKiron from "../../../public/assets/images/ladykiron.png";
 import ecoEvents from "../../../public/assets/images/eco-events-vue-form.png";
 import memeGenerator from "../../../public/assets/images/meme-generator.png";
@@ -134,55 +137,54 @@ export const finishes = [
 export const workImages = [
   {
     id: 1,
+    img: greenpeace,
+    name: "Greenpeace Italia - Donations Portal",
+    category: "team",
+    link: "https://sostenitori.greenpeace.it/",
+  },
+  {
+    id: 2,
+    img: nextflix,
+    name: "My Netflix List",
+    category: "solo",
+    code: "https://github.com/ateyapayo/movies-next",
+    link: "https://nextflix-uk.vercel.app",
+  },
+  {
+    id: 3,
+    img: ras,
+    name: "RAS (Autonomous Region of Sardinia) website",
+    category: "team",
+    link: "https://www.regione.sardegna.it/",
+  },
+
+  {
+    id: 4,
     img: netflixList,
     name: "My Netflix List",
-    category: "app",
+    category: "solo",
     code: "https://github.com/ateyapayo/netflix-list",
     link: "https://ateyapayo.github.io/netflix-list",
   },
   {
-    id: 2,
+    id: 5,
     img: ladyKiron,
     name: "Lady Kyron's Blog",
-    category: "web",
+    category: "solo",
     code: "https://github.com/ateyapayo/ladykiron",
     link: "https://ateyapayo.github.io/ladykiron",
   },
   {
-    id: 3,
+    id: 6,
     img: ecoEvents,
     name: "Eco Events - Vue 3 Form",
-    category: "form",
+    category: "solo",
     code: "https://github.com/ateyapayo/eco-events-vue-form",
     link: "https://ateyapayo.github.io/eco-events-vue-form",
   },
-  {
-    id: 4,
-    img: memeGenerator,
-    name: "Meme Generator",
-    category: "app",
-    code: "https://scrimba.com/scrim/cMQE48sL",
-    link: "https://scrimba.com/scrim/cMQE48sL",
-  },
-  {
-    id: 5,
-    img: workshop,
-    name: "Street Photography Workshop Form",
-    category: "form",
-    code: "https://github.com/ateyapayo/photographyworkshop",
-    link: "https://ateyapayo.github.io/photographyworkshop",
-  },
-  {
-    id: 6,
-    img: airBnb,
-    name: "AirBnb Clone",
-    category: "web",
-    code: "https://scrimba.com/scrim/cL3PmqT6",
-    link: "https://scrimba.com/scrim/cL3PmqT6",
-  },
 ];
 
-export const workNavs = ["All", "Web", "App", "Form"];
+export const workNavs = ["All", "Solo", "Team"];
 
 export const contacts = [
   {
