@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-// import "./Navbar.scss";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+
 import { navLinks } from "../../pages/api/datafetch/Data";
 import { socialIcons } from "../../pages/api/datafetch/Data";
+
 import reactLogo from "../../public/assets/images/react-logo.svg";
-import Link from "next/link";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -92,7 +93,7 @@ const Navbar = () => {
           variants={navLinkVariants}
           animate={toggle ? "visible" : "hidden"}
           className="menuX"
-          style={{visibility: (!toggle) ? "hidden" : "visible"}}
+          style={{ visibility: !toggle ? "hidden" : "visible" }}
         >
           <HiX onClick={() => setToggle(false)} />
           {navLinks.map((navlink, index) => {

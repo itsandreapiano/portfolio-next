@@ -55,7 +55,7 @@ const About = () => {
             reusable components.
             <br />
             Next.js is my favourite working environment so far, in which I love
-            having fun with Data Fetching, React Hooks, custom CSS and UI
+            having fun with Data Fetching, Routing, React Hooks, custom CSS and UI
             Libraries/Frameworks.
             <br /> <br />
             High performance? It's a must. The more creative? The better.

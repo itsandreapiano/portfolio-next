@@ -1,6 +1,4 @@
-import React from "react";
 import avatar from "../../../public/assets/images/me.png";
-// import "./Home.scss";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

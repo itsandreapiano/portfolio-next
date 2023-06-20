@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import "./Portfolio.scss";
 import { workNavs } from "../../api/datafetch/Data";
 import { workImages } from "../../api/datafetch/Data";
 import { FiGithub, FiEye } from "react-icons/fi";

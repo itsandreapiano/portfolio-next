@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-// import "./Skills.scss";
+import { useState } from "react";
 import { icons } from "../../api/datafetch/Data";
 import { experiences } from "../../api/datafetch/Data";
 import { finishes } from "../../api/datafetch/Data";
