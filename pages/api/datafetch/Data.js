@@ -62,7 +62,7 @@ export const bios = [
     id: 2,
     icon: <FaPhoneAlt />,
     key: "Phone",
-    value: "(039) 340 28 71 146",
+    value: "+44 7984 745431",
   },
   {
     id: 3,
@@ -197,6 +197,6 @@ export const contacts = [
   {
     id: 3,
     icon: <FaPhoneAlt />,
-    infoText: "(039) 340 28 71 146",
+    infoText: "+44 7984 745431",
   },
 ];
