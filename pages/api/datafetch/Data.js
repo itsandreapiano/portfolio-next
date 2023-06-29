@@ -19,7 +19,7 @@ import netflixList from "../../../public/assets/images/netflix.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
 import ras from "../../../public/assets/images/ras.png";
-import ladyKiron from "../../../public/assets/images/ladykiron.png";
+import sdl from "../../../public/assets/images/sdl.png";
 import ecoEvents from "../../../public/assets/images/eco-events-vue-form.png";
 
 export const navLinks = ["home", "about", "skills", "work", "contact"];
@@ -141,6 +141,13 @@ export const workImages = [
   },
   {
     id: 2,
+    img: sdl,
+    name: "Sardegna Digital Library",
+    category: "team",
+    link: "https://www.sardegnadigitallibrary.it",
+  },
+  {
+    id: 3,
     img: nextflix,
     name: "My Netflix List",
     category: "solo",
@@ -148,7 +155,7 @@ export const workImages = [
     link: "https://nextflix-uk.vercel.app",
   },
   {
-    id: 3,
+    id: 4,
     img: ras,
     name: "RAS (Autonomous Region of Sardinia) website",
     category: "team",
@@ -156,20 +163,12 @@ export const workImages = [
   },
 
   {
-    id: 4,
+    id: 5,
     img: netflixList,
     name: "My Netflix List",
     category: "solo",
     code: "https://github.com/ateyapayo/netflix-list",
     link: "https://ateyapayo.github.io/netflix-list",
-  },
-  {
-    id: 5,
-    img: ladyKiron,
-    name: "Lady Kyron's Blog",
-    category: "solo",
-    code: "https://github.com/ateyapayo/ladykiron",
-    link: "https://ateyapayo.github.io/ladykiron",
   },
   {
     id: 6,
