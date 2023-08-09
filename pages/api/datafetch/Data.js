@@ -35,7 +35,7 @@ export const socialIcons = [
   <Link
     title="Instagram"
     target="_blank"
-    href="https://www.instagram.com/ateyapayo"
+    href="https://www.instagram.com/itsandreapiano"
   >
     <FaInstagram />
   </Link>,
