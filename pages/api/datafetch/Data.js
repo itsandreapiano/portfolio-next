@@ -13,7 +13,12 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import Link from "next/link";
-import { SiTypescript, SiJavascript, SiNodedotjs } from "react-icons/si";
+import {
+  SiTypescript,
+  SiJavascript,
+  SiNodedotjs,
+  SiNextdotjs,
+} from "react-icons/si";
 import netflixList from "../../../public/assets/images/netflix.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
@@ -79,7 +84,7 @@ export const icons = [
   <SiNodedotjs title="Node.js" />,
   <SiTypescript title="TypeScript" />,
   <FaReact title="ReactJS" />,
-  <SiNodedotjs title="Next.js" />,
+  <SiNextdotjs title="Next.js" />,
 ];
 
 export const experiences = [
@@ -116,7 +121,7 @@ export const finishes = [
   },
   {
     id: 2,
-    number: "19",
+    number: "22",
     itemName: "Projects Completed",
   },
   {
