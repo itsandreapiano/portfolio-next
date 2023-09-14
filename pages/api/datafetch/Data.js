@@ -3,7 +3,6 @@ import {
   FaCss3,
   FaReact,
   FaFigma,
-  FaGit,
   FaPhoneAlt,
   FaUser,
   FaMapMarkerAlt,
@@ -14,7 +13,7 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import Link from "next/link";
-import { SiNextdotjs, SiTypescript, SiJavascript } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiNodedotjs } from "react-icons/si";
 import netflixList from "../../../public/assets/images/netflix.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
@@ -74,13 +73,13 @@ export const bios = [
 
 export const icons = [
   <FaFigma title="Figma" />,
-  <FaGit title="Git" />,
   <FaHtml5 title="HTML5" />,
   <FaCss3 title="CSS3" />,
   <SiJavascript title="JavaScript" />,
+  <SiNodedotjs title="Node.js" />,
   <SiTypescript title="TypeScript" />,
   <FaReact title="ReactJS" />,
-  <SiNextdotjs title="NextJS" />,
+  <SiNodedotjs title="Next.js" />,
 ];
 
 export const experiences = [
