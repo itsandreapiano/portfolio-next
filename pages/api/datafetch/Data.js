@@ -2,7 +2,6 @@ import {
   FaHtml5,
   FaCss3,
   FaReact,
-  FaFigma,
   FaPhoneAlt,
   FaUser,
   FaMapMarkerAlt,
@@ -11,6 +10,7 @@ import {
   FaLinkedin,
   FaFacebook,
   FaGithub,
+  FaAngular,
 } from "react-icons/fa";
 import Link from "next/link";
 import {
@@ -77,7 +77,6 @@ export const bios = [
 ];
 
 export const icons = [
-  <FaFigma title="Figma" />,
   <FaHtml5 title="HTML5" />,
   <FaCss3 title="CSS3" />,
   <SiJavascript title="JavaScript" />,
@@ -85,29 +84,36 @@ export const icons = [
   <SiTypescript title="TypeScript" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
+  <FaAngular title="Angular 15" />,
 ];
 
 export const experiences = [
   {
     id: 1,
+    year: "2023",
+    position: "Data Engineer",
+    company: "Cardinality.io (Acquired by Elisa)",
+  },
+  {
+    id: 2,
     year: "2022",
-    position: "Software Developer",
+    position: "Web Developer",
     company: "Softfobia (An Indra Company)",
   },
   {
-    di: 2,
+    di: 3,
     year: "2019",
     position: "Translator",
     company: "Quora, Inc.",
   },
   {
-    id: 3,
+    id: 4,
     year: "2016",
     position: "Photographer",
     company: "Self-employed",
   },
   {
-    id: 4,
+    id: 5,
     year: "2013",
     position: "Affiliate Partner / Marketing",
     company: "Macrolibrarsi.it",
@@ -190,7 +196,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "United Kingdom",
+    infoText: "West Hill, England, United Kingdom",
   },
   {
     id: 2,

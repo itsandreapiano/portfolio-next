@@ -32,7 +32,7 @@ const Home = () => {
         <h3 className="name">
           Hi, I'm <span className="gradient-heading">Andrea Piano</span>{" "}
         </h3>
-        <span className="job">An Italian Front-end Software Developer</span>
+        <span className="job">A passionate Data & Software Engineer</span>
 
         <section className="text-box">
           <span className="text">Don't worry,</span>
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         <div className="reactJS">#reactJS</div>
         <div className="nextJS" href="#skills">
-          #nextJS
+          #dataDriven
         </div>
       </div>
     </motion.div>

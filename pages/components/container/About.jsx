@@ -33,9 +33,7 @@ const About = () => {
           >
             <Image src={avatar} alt="Andrea Piano's picture" />
           </motion.div>
-          <div
-            className="div-mobile"
-          >
+          <div className="div-mobile">
             <Image src={avatar} alt="Andrea Piano's picture" />
           </div>
         </motion.div>
@@ -48,15 +46,15 @@ const About = () => {
           <p>
             Heya!
             <br />
-            I'm a Front-end Software Developer and ReactJS lover.
+            I'm a Data & Software Engineer and ReactJS lover.
             <br />
             I have a passion for developing unique WebApps which improve
             people's lives, by creating & translating Figma mockups into
             reusable components.
             <br />
             Next.js is my favourite working environment so far, in which I love
-            having fun with Data Fetching, Routing, React Hooks, custom CSS and UI
-            Libraries/Frameworks.
+            having fun with Data Fetching & Visualisation, Routing, React Hooks,
+            custom CSS and UI Libraries/Frameworks.
             <br /> <br />
             High performance? It's a must. The more creative? The better.
             <br />
