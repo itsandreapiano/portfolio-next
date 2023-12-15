@@ -86,7 +86,7 @@ export const icons = [
   <SiMysql title="MySQL" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
-  <FaFigma />,
+  <FaFigma title="Figma" />,
 ];
 
 export const experiences = [
