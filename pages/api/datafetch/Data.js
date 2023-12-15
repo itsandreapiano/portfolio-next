@@ -11,6 +11,7 @@ import {
   FaFacebook,
   FaGithub,
   FaAngular,
+  FaFigma,
 } from "react-icons/fa";
 import Link from "next/link";
 import {
@@ -18,6 +19,7 @@ import {
   SiJavascript,
   SiNodedotjs,
   SiNextdotjs,
+  SiMysql,
 } from "react-icons/si";
 import netflixList from "../../../public/assets/images/netflix.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
@@ -77,14 +79,14 @@ export const bios = [
 ];
 
 export const icons = [
-  <FaHtml5 title="HTML5" />,
-  <FaCss3 title="CSS3" />,
+  <FaCss3 title="CSS" />,
   <SiJavascript title="JavaScript" />,
-  <SiNodedotjs title="Node.js" />,
   <SiTypescript title="TypeScript" />,
+  <SiNodedotjs title="Node.js" />,
+  <SiMysql title="MySQL" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
-  <FaAngular title="Angular 15" />,
+  <FaFigma />,
 ];
 
 export const experiences = [

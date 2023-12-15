@@ -46,11 +46,11 @@ const About = () => {
           <p>
             Heya!
             <br />
-            I'm a Data & Software Engineer and ReactJS lover.
+            I'm a Data & Software Engineer, and ReactJS lover.
             <br />
             I have a passion for developing unique WebApps which improve
             people's lives, by creating & translating Figma mockups into
-            reusable components.
+            reusable components and analysing data.
             <br />
             Next.js is my favourite working environment so far, in which I love
             having fun with Data Fetching & Visualisation, Routing, React Hooks,

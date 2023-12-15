@@ -148,8 +148,8 @@ const Contact = () => {
         >
           <h3>Contact me for a first interview</h3>
           <p className="contact_text">
-            Is your company based in the UK and planning to expand one
-            of its Dev Teams very soon? <br />
+            Is your company based in the UK, or Europe, and planning to expand
+            one of its innovative teams very soon? <br />
             Well, you might have ended up on the right page, at the right time.
             <br />
             Contact me now to book a first interview!
@@ -195,15 +195,14 @@ const Contact = () => {
             <>
               <h3>Get In Touch</h3>
 
-              {
-              (!nameRegex.test(firstName) ||
-                firstName.length < 2 ||
-                !nameRegex.test(lastName) ||
-                lastName.length < 2 ||
-                phone.length < 5 ||
-                !phoneRegex.test(phone) ||
-                !emailRegex.test(email) ||
-                message.length < 1) ? (
+              {!nameRegex.test(firstName) ||
+              firstName.length < 2 ||
+              !nameRegex.test(lastName) ||
+              lastName.length < 2 ||
+              phone.length < 5 ||
+              !phoneRegex.test(phone) ||
+              !emailRegex.test(email) ||
+              message.length < 1 ? (
                 <div className="submit-message">
                   <span className="invalid-submit">
                     Please fill out all the fields.
@@ -211,12 +210,9 @@ const Contact = () => {
                 </div>
               ) : (
                 <div className="submit-message">
-                  <span className="valid-submit">
-                    Ready to submit!
-                  </span>
+                  <span className="valid-submit">Ready to submit!</span>
                 </div>
-              )} 
-              
+              )}
 
               <div className="row">
                 <input
@@ -249,7 +245,6 @@ const Contact = () => {
                   placeholder="message"
                 ></textarea>
               </div>
-
 
               {!valid && (
                 <button className="btn-disabled" disabled>

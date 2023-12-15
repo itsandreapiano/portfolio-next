@@ -32,7 +32,7 @@ const Home = () => {
         <h3 className="name">
           Hi, I'm <span className="gradient-heading">Andrea Piano</span>{" "}
         </h3>
-        <span className="job">A passionate Data & Software Engineer</span>
+        <span className="job">A data driven Software Engineer</span>
 
         <section className="text-box">
           <span className="text">Don't worry,</span>
