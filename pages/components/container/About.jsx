@@ -46,7 +46,7 @@ const About = () => {
           <p>
             Heya!
             <br />
-            I'm a Data & Software Engineer, and ReactJS lover.
+            I'm an innovative Front-end Software Engineer and ReactJS lover.
             <br />
             I have a passion for developing unique WebApps which improve
             people's lives, by creating & translating Figma mockups into

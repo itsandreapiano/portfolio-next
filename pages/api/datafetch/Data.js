@@ -68,7 +68,7 @@ export const bios = [
     id: 2,
     icon: <FaPhoneAlt />,
     key: "Phone",
-    value: "+44 7984 745431",
+    value: "+39 340 2871146",
   },
   {
     id: 3,
@@ -129,7 +129,7 @@ export const finishes = [
   },
   {
     id: 2,
-    number: "22",
+    number: "25",
     itemName: "Projects Completed",
   },
   {
@@ -198,7 +198,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "West Hill, England, United Kingdom",
+    infoText: "Europe",
   },
   {
     id: 2,
@@ -208,6 +208,6 @@ export const contacts = [
   {
     id: 3,
     icon: <FaPhoneAlt />,
-    infoText: "+44 7984 745431",
+    infoText: "+39 340 2871146",
   },
 ];
