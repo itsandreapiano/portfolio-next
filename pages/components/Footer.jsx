@@ -16,7 +16,7 @@ const Footer = () => {
       >
         <div className="copyright">
           <p>
-            Copyright &copy; 2023 All rights reserved. Made by{" "}
+            Copyright &copy; {new Date().getFullYear()} All rights reserved. Made by{" "}
             <Link href="/">
               <span>Andrea Piano</span>
             </Link>

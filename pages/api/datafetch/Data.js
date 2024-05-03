@@ -19,8 +19,8 @@ import {
   SiJavascript,
   SiNodedotjs,
   SiNextdotjs,
-  SiMysql,
-} from "react-icons/si";
+  SiMysql, SiDotnet
+} from 'react-icons/si';
 import netflixList from "../../../public/assets/images/netflix.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
@@ -86,36 +86,42 @@ export const icons = [
   <SiMysql title="MySQL" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
-  <FaFigma title="Figma" />,
+  <SiDotnet title=".NET" />,
 ];
 
 export const experiences = [
   {
     id: 1,
+    year: "2024",
+    position: "Mid Software Developer",
+    company: "Proedis",
+  },
+  {
+    id: 2,
     year: "2023",
     position: "Data Engineer",
     company: "Cardinality.io (Acquired by Elisa)",
   },
   {
-    id: 2,
+    id: 3,
     year: "2022",
     position: "Frontend Developer",
     company: "Softfobia (Minsait)",
   },
   {
-    di: 3,
+    di: 4,
     year: "2019",
     position: "Translator",
     company: "Quora, Inc.",
   },
   {
-    id: 4,
+    id: 5,
     year: "2016",
     position: "Photographer",
     company: "Self-employed",
   },
   {
-    id: 5,
+    id: 6,
     year: "2013",
     position: "Affiliate Partner / Marketing",
     company: "Macrolibrarsi.it",
@@ -129,7 +135,7 @@ export const finishes = [
   },
   {
     id: 2,
-    number: "25",
+    number: "32",
     itemName: "Projects Completed",
   },
   {
@@ -198,7 +204,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "Europe",
+    infoText: "Turin",
   },
   {
     id: 2,
