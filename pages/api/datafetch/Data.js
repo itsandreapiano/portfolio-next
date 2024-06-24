@@ -1,5 +1,4 @@
 import {
-  FaHtml5,
   FaCss3,
   FaReact,
   FaPhoneAlt,
@@ -10,7 +9,6 @@ import {
   FaLinkedin,
   FaFacebook,
   FaGithub,
-  FaAngular,
   FaFigma,
 } from "react-icons/fa";
 import Link from "next/link";
@@ -19,8 +17,8 @@ import {
   SiJavascript,
   SiNodedotjs,
   SiNextdotjs,
-  SiMysql, SiDotnet
-} from 'react-icons/si';
+  SiMysql,
+} from "react-icons/si";
 import netflixList from "../../../public/assets/images/netflix.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
@@ -83,10 +81,10 @@ export const icons = [
   <SiJavascript title="JavaScript" />,
   <SiTypescript title="TypeScript" />,
   <SiNodedotjs title="Node.js" />,
-  <SiMysql title="MySQL" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
-  <SiDotnet title=".NET" />,
+  <SiMysql title="MySQL" />,
+  <FaFigma title="Figma" />,
 ];
 
 export const experiences = [
@@ -130,17 +128,17 @@ export const experiences = [
 export const finishes = [
   {
     id: 1,
-    number: "1+",
+    number: "2+",
     itemName: "Years Of Experience",
   },
   {
     id: 2,
-    number: "32",
+    number: "33",
     itemName: "Projects Completed",
   },
   {
     id: 3,
-    number: "C1",
+    number: "C2",
     itemName: "English",
   },
   {
@@ -204,7 +202,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "Turin",
+    infoText: "Sardinia, Italy",
   },
   {
     id: 2,

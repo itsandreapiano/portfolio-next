@@ -148,8 +148,8 @@ const Contact = () => {
         >
           <h3>Contact me for a first interview</h3>
           <p className="contact_text">
-            Is your company based in the Netherlands and planning to expand one
-            of its innovative teams very soon? <br />
+            Does your company operate from remote and plan to expand one of its
+            innovative teams very soon? <br />
             Well, you might have ended up on the right page, at the right time.
             <br />
             Contact me now to book a first interview!
