@@ -202,7 +202,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "Sardinia, Italy",
+    infoText: "Cagliari / Poznań",
   },
   {
     id: 2,
