@@ -24,7 +24,7 @@ import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
 import ras from "../../../public/assets/images/ras.png";
 import sdl from "../../../public/assets/images/sdl.png";
-import ecoEvents from "../../../public/assets/images/eco-events-vue-form.png";
+import atmasfera from "../../../public/assets/images/atmasfera.png";
 
 export const navLinks = ["home", "about", "skills", "work", "contact"];
 
@@ -153,7 +153,7 @@ export const workImages = [
     img: greenpeace,
     name: "Greenpeace Italia - Donations Portal",
     category: "team",
-    link: "https://sostenitori.greenpeace.it/",
+    link: "https://sostenitori.greenpeace.it",
   },
   {
     id: 2,
@@ -164,6 +164,13 @@ export const workImages = [
   },
   {
     id: 3,
+    img: atmasfera,
+    name: "Atmasfera - Online Yoga Courses",
+    category: "team",
+    link: "https://www.atmasfera.it",
+  },
+  {
+    id: 4,
     img: nextflix,
     name: "My Netflix List",
     category: "solo",
@@ -171,7 +178,7 @@ export const workImages = [
     link: "https://nextflix-uk.vercel.app",
   },
   {
-    id: 4,
+    id: 5,
     img: ras,
     name: "RAS (Autonomous Region of Sardinia) website",
     category: "team",
@@ -179,20 +186,12 @@ export const workImages = [
   },
 
   {
-    id: 5,
+    id: 6,
     img: netflixList,
     name: "My Netflix List",
     category: "solo",
     code: "https://github.com/ateyapayo/netflix-list",
     link: "https://ateyapayo.github.io/netflix-list",
-  },
-  {
-    id: 6,
-    img: ecoEvents,
-    name: "Eco Events - Vue 3 Form",
-    category: "solo",
-    code: "https://github.com/ateyapayo/eco-events-vue-form",
-    link: "https://ateyapayo.github.io/eco-events-vue-form",
   },
 ];
 
@@ -202,7 +201,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "Cagliari / Poznań",
+    infoText: "Italy / Poland",
   },
   {
     id: 2,
