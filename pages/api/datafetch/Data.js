@@ -49,7 +49,7 @@ export const socialIcons = [
   >
     <FaLinkedin />
   </Link>,
-  <Link title="GitHub" target="_blank" href="https://github.com/ateyapayo">
+  <Link title="GitHub" target="_blank" href="https://github.com/itsandreapiano">
     <FaGithub />
   </Link>,
 ];
@@ -166,7 +166,7 @@ export const workImages = [
     img: nextflix,
     name: "My Netflix List",
     category: "solo",
-    code: "https://github.com/ateyapayo/movies-next",
+    code: "https://github.com/itsandreapiano/movies-next",
     link: "https://nextflix-uk.vercel.app",
   },
   {
@@ -182,7 +182,7 @@ export const workImages = [
     img: netflixList,
     name: "My Netflix List",
     category: "solo",
-    code: "https://github.com/ateyapayo/netflix-list",
+    code: "https://github.com/itsandreapiano/netflix-list",
     link: "https://ateyapayo.github.io/netflix-list",
   },
   {
@@ -190,7 +190,7 @@ export const workImages = [
     img: ecoEvents,
     name: "Eco Events - Vue 3 Form",
     category: "solo",
-    code: "https://github.com/ateyapayo/eco-events-vue-form",
+    code: "https://github.com/itsandreapiano/eco-events-vue-form",
     link: "https://ateyapayo.github.io/eco-events-vue-form",
   },
 ];
