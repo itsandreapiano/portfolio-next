@@ -46,14 +46,14 @@ const About = () => {
           <p>
             Heya!
             <br />
-            I'm an innovative Front-end Software Engineer and React.js lover.
+            I'm an innovative Software Engineer and React.js lover.
             <br />
             I have a passion for developing unique WebApps which improve
             people's lives, by creating & translating Figma mockups into
             reusable components and analysing data.
             <br />
             Next.js is my favorite working environment so far, in which I love
-            having fun with Data Fetching & Visualisation, Routing, React Hooks,
+            having fun with CRUD operations, React Hooks,
             custom CSS and UI Libraries/Frameworks.
             <br /> <br />
             High performance? It's a must. The more creative? The better.

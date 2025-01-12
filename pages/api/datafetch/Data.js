@@ -10,6 +10,7 @@ import {
   FaFacebook,
   FaGithub,
   FaFigma,
+  FaHtml5,
 } from "react-icons/fa";
 import Link from "next/link";
 import {
@@ -18,13 +19,18 @@ import {
   SiNodedotjs,
   SiNextdotjs,
   SiMysql,
+  SiVercel,
+  SiPrisma,
+  SiTailwindcss,
 } from "react-icons/si";
+
 import netflixList from "../../../public/assets/images/netflix.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
 import ras from "../../../public/assets/images/ras.png";
 import sdl from "../../../public/assets/images/sdl.png";
-import ecoEvents from "../../../public/assets/images/eco-events-vue-form.png";
+import istellas from "../../../public/assets/images/istellas.png";
+
 export const navLinks = ["home", "about", "skills", "work", "contact"];
 
 export const socialIcons = [
@@ -76,14 +82,18 @@ export const bios = [
 ];
 
 export const icons = [
+  <FaHtml5 title="HTML5" />,
   <FaCss3 title="CSS" />,
+  <SiTailwindcss title="Tailwind" />,
+  <FaFigma title="Figma" />,
   <SiJavascript title="JavaScript" />,
   <SiTypescript title="TypeScript" />,
   <SiNodedotjs title="Node.js" />,
+  <SiMysql title="MySQL" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
-  <SiMysql title="MySQL" />,
-  <FaFigma title="Figma" />,
+  <SiPrisma title="Prisma" />,
+  <SiVercel title="Vercel" />,
 ];
 
 export const experiences = [
@@ -132,7 +142,7 @@ export const finishes = [
   },
   {
     id: 2,
-    number: "33",
+    number: "35",
     itemName: "Projects Completed",
   },
   {
@@ -163,6 +173,14 @@ export const workImages = [
   },
   {
     id: 3,
+    img: istellas,
+    name: "iStellas - Where astrology meets community.",
+    category: "solo",
+    code: "https://github.com/itsandreapiano/istellas",
+    link: "https://istellas.vercel.app/",
+  },
+  {
+    id: 4,
     img: nextflix,
     name: "My Netflix List",
     category: "solo",
@@ -170,7 +188,7 @@ export const workImages = [
     link: "https://nextflix-uk.vercel.app",
   },
   {
-    id: 4,
+    id: 5,
     img: ras,
     name: "RAS (Autonomous Region of Sardinia) website",
     category: "team",
@@ -178,20 +196,12 @@ export const workImages = [
   },
 
   {
-    id: 5,
+    id: 6,
     img: netflixList,
     name: "My Netflix List",
     category: "solo",
     code: "https://github.com/itsandreapiano/netflix-list",
     link: "https://ateyapayo.github.io/netflix-list",
-  },
-  {
-    id: 6,
-    img: ecoEvents,
-    name: "Eco Events - Vue 3 Form",
-    category: "solo",
-    code: "https://github.com/itsandreapiano/eco-events-vue-form",
-    link: "https://ateyapayo.github.io/eco-events-vue-form",
   },
 ];
 
@@ -201,7 +211,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "Italy / Poland",
+    infoText: "Poznań, Poland",
   },
   {
     id: 2,
