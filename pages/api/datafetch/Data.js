@@ -201,7 +201,7 @@ export const workImages = [
     name: "My Netflix List",
     category: "solo",
     code: "https://github.com/itsandreapiano/netflix-list",
-    link: "https://ateyapayo.github.io/netflix-list",
+    link: "https://itsandreapiano.github.io/netflix-list",
   },
 ];
 
