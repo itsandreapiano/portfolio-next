@@ -105,30 +105,24 @@ export const experiences = [
   },
   {
     id: 2,
-    year: "2023",
-    position: "Data Engineer",
-    company: "Cardinality.io (Acquired by Elisa)",
-  },
-  {
-    id: 3,
     year: "2022",
     position: "Frontend Developer",
     company: "Softfobia (Minsait)",
   },
   {
-    di: 4,
+    di: 3,
     year: "2019",
     position: "Translator",
     company: "Quora, Inc.",
   },
   {
-    id: 5,
+    id: 4,
     year: "2016",
     position: "Photographer",
     company: "Self-employed",
   },
   {
-    id: 6,
+    id: 5,
     year: "2013",
     position: "Affiliate Partner / Marketing",
     company: "Macrolibrarsi.it",
