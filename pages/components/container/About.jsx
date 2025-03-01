@@ -48,13 +48,12 @@ const About = () => {
             <br />
             I'm an innovative Software Engineer and React.js lover.
             <br />
-            I have a passion for developing unique WebApps which improve
-            people's lives, by creating & translating Figma mockups into
-            reusable components and analysing data.
+            I have a passion for developing unique WebApps which improve people's lives,
+            by blending my technical skills with my creative vision of things and personal passions.
             <br />
-            Next.js is my favorite working environment so far, in which I love
-            having fun with CRUD operations, React Hooks,
-            custom CSS and UI Libraries/Frameworks.
+            Next.js is my favorite development environment, where I love having fun working with CRUD operations,
+            optimizing performance, managing state with React hooks, styling with Tailwind,
+            and exploring UI tools to craft intuitive and outstanding user experiences.
             <br /> <br />
             High performance? It's a must. The more creative? The better.
             <br />

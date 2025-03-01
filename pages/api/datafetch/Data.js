@@ -100,32 +100,20 @@ export const experiences = [
   {
     id: 1,
     year: "2024",
+    position: "Frontend Engineer",
+    company: "Bringer Agency (Fiverr)",
+  },
+  {
+    id: 2,
+    year: "2024",
     position: "Mid Software Developer",
     company: "Proedis",
   },
   {
-    id: 2,
+    id: 3,
     year: "2022",
     position: "Frontend Developer",
     company: "Softfobia (Minsait)",
-  },
-  {
-    di: 3,
-    year: "2019",
-    position: "Translator",
-    company: "Quora, Inc.",
-  },
-  {
-    id: 4,
-    year: "2016",
-    position: "Photographer",
-    company: "Self-employed",
-  },
-  {
-    id: 5,
-    year: "2013",
-    position: "Affiliate Partner / Marketing",
-    company: "Macrolibrarsi.it",
   },
 ];
 export const finishes = [
@@ -205,7 +193,7 @@ export const contacts = [
   {
     id: 1,
     icon: <FaMapMarkerAlt />,
-    infoText: "Poznań, Poland",
+    infoText: "Poznań, Wielkopolskie, Poland",
   },
   {
     id: 2,
