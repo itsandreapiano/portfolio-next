@@ -37,7 +37,7 @@ export const socialIcons = [
   <Link
     title="Facebook"
     target="_blank"
-    href="https://www.facebook.com/andreapianolandia"
+    href="https://www.facebook.com/itsandreapiano"
   >
     <FaFacebook />
   </Link>,
@@ -71,7 +71,7 @@ export const bios = [
     id: 2,
     icon: <FaPhoneAlt />,
     key: "Phone",
-    value: "+39 340 2871146",
+    value: "+48 600 967 307",
   },
   {
     id: 3,
@@ -203,6 +203,6 @@ export const contacts = [
   {
     id: 3,
     icon: <FaPhoneAlt />,
-    infoText: "+39 340 2871146",
+    infoText: "+48 600 967 307",
   },
 ];
