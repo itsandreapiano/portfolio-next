@@ -99,15 +99,15 @@ export const icons = [
 export const experiences = [
   {
     id: 1,
-    year: "2024",
-    position: "Frontend Engineer",
-    company: "Bringer Agency (Fiverr)",
+    year: "2025",
+    position: "IT Analyst",
+    company: "CFO Solutions",
   },
   {
     id: 2,
     year: "2024",
-    position: "Mid Software Developer",
-    company: "Proedis",
+    position: "Frontend Engineer",
+    company: "Bringer Agency (Fiverr)",
   },
   {
     id: 3,
@@ -119,12 +119,12 @@ export const experiences = [
 export const finishes = [
   {
     id: 1,
-    number: "2+",
+    number: "3+",
     itemName: "Years Of Experience",
   },
   {
     id: 2,
-    number: "35",
+    number: "37",
     itemName: "Projects Completed",
   },
   {
