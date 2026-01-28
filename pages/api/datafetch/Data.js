@@ -24,7 +24,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 
-import netflixList from "../../../public/assets/images/netflix.png";
+import rwsPolska from "../../../public/assets/images/rwspolska.png";
 import nextflix from "../../../public/assets/images/nextflix.png";
 import greenpeace from "../../../public/assets/images/greenpeace.png";
 import ras from "../../../public/assets/images/ras.png";
@@ -148,10 +148,10 @@ export const workImages = [
   },
   {
     id: 2,
-    img: sdl,
-    name: "Sardegna Digital Library",
-    category: "team",
-    link: "https://www.sardegnadigitallibrary.it",
+    img: rwsPolska,
+    name: "Robotic Warehouse Solutions",
+    category: "solo",
+    link: "https://www.rwspolska.pl/",
   },
   {
     id: 3,
@@ -163,6 +163,13 @@ export const workImages = [
   },
   {
     id: 4,
+    img: sdl,
+    name: "Sardegna Digital Library",
+    category: "team",
+    link: "https://www.sardegnadigitallibrary.it",
+  },
+  {
+    id: 5,
     img: nextflix,
     name: "My Netflix List",
     category: "solo",
@@ -170,20 +177,11 @@ export const workImages = [
     link: "https://nextflix-uk.vercel.app",
   },
   {
-    id: 5,
+    id: 6,
     img: ras,
     name: "RAS (Autonomous Region of Sardinia) website",
     category: "team",
     link: "https://www.regione.sardegna.it/",
-  },
-
-  {
-    id: 6,
-    img: netflixList,
-    name: "My Netflix List",
-    category: "solo",
-    code: "https://github.com/itsandreapiano/netflix-list",
-    link: "https://itsandreapiano.github.io/netflix-list",
   },
 ];
 
