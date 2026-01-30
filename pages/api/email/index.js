@@ -1,6 +1,7 @@
 import sgMail from "@sendgrid/mail";
 import fillTemplate from "./template/fillTemplate.js";
 
+// Sendgrid api key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
