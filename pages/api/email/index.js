@@ -1,70 +1,60 @@
+import sgMail from "@sendgrid/mail";
 import fillTemplate from "./template/fillTemplate.js";
 
-export default function (req, res) {
-  require("dotenv").config();
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  let nodemailer = require("nodemailer");
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
 
   const { data } = req.body;
 
-  if (data) {
-    let promises = [];
+  if (!Array.isArray(data) || data.length === 0) {
+    return res.status(400).json({ error: "Invalid payload" });
+  }
 
-    for (let email of data) {
-      const { from, subject, message, type } = email;
+  try {
+    const results = await Promise.all(
+      data.map((email) => {
+        const { from, subject, message, type } = email;
 
-      if (from && subject && message && type) {
-        const promise = new Promise((resolve, reject) => {
-          let sendTo = "";
+        if (!subject || !message || !type) {
+          throw new Error("Missing required email fields");
+        }
 
-          switch (type) {
-            case "greetings":
-              sendTo = from;
-              break;
-            case "summary":
-              sendTo = process.env.ACCOUNT_EMAIL;
-              break;
-            default:
-              sendTo = process.env.ACCOUNT_EMAIL;
-          }
+        const to = type === "greetings" ? from : process.env.ACCOUNT_EMAIL;
 
-          const transporter = nodemailer.createTransport({
-            port: process.env.PORT_EMAIL,
-            host: process.env.HOST_EMAIL,
-            auth: {
-              user: process.env.ACCOUNT_EMAIL,
-              pass: process.env.APP_PASSWORD,
-            },
-            secure: process.env.PORT_EMAIL == 465 ? true : false,
-            requireTLS: true,
-          });
+        const fromEmail = process.env.ACCOUNT_EMAIL;
 
-          const mailData = {
-            from: process.env.ACCOUNT_EMAIL,
-            to: sendTo,
-            subject: subject,
-            text: message,
-            html: fillTemplate(email),
-          };
-
-          transporter.sendMail(mailData, function (err, info) {
-            if (err) {
-              console.log(err);
-              reject(res.status(500).send(err));
-            } else {
-              resolve(res.status(200).send(info));
-            }
-          });
+        return sgMail.send({
+          to,
+          from: fromEmail,
+          subject,
+          text: message,
+          html: fillTemplate(email),
         });
+      }),
+    );
 
-        promises.push(promise);
-      }
+    return res.status(200).json({
+      success: true,
+      sent: results.length,
+      results,
+    });
+  } catch (err) {
+    console.error("EMAIL API ERROR:", err);
+
+    if (err.response && err.response.body && err.response.body.errors) {
+      return res.status(500).json({
+        success: false,
+        error: err.response.body.errors.map((e) => e.message).join(", "),
+      });
     }
 
-    Promise.all(promises).then((values) => {
-      console.log(values);
+    return res.status(500).json({
+      success: false,
+      error: err.message || "Email sending failed",
     });
-  } else {
-    res.status(500).send({ error: "Not valid content" });
   }
 }
