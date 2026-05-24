@@ -148,11 +148,10 @@ const Contact = () => {
         >
           <h3>Contact me for a first interview</h3>
           <p className="contact_text">
-            Does your company operate from Poznań and/or remote and plan to
-            expand one of its innovative teams very soon? <br />
-            Well, you might have ended up on the right page, at the right time.
+            Does your company operate remotely across Europe and plan to expand its tech team soon?
+            Well, you might have just landed on the right page, at the right time.
             <br />
-            Contact me now to book a first interview!
+            Let’s connect and build something valuable together.
           </p>
           {contacts.map((contact) => {
             return (
@@ -196,13 +195,13 @@ const Contact = () => {
               <h3>Get In Touch</h3>
 
               {!nameRegex.test(firstName) ||
-              firstName.length < 2 ||
-              !nameRegex.test(lastName) ||
-              lastName.length < 2 ||
-              phone.length < 5 ||
-              !phoneRegex.test(phone) ||
-              !emailRegex.test(email) ||
-              message.length < 1 ? (
+                firstName.length < 2 ||
+                !nameRegex.test(lastName) ||
+                lastName.length < 2 ||
+                phone.length < 5 ||
+                !phoneRegex.test(phone) ||
+                !emailRegex.test(email) ||
+                message.length < 1 ? (
                 <div className="submit-message">
                   <span className="invalid-submit">
                     Please fill out all the fields.

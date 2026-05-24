@@ -44,19 +44,14 @@ const About = () => {
           transition={{ duration: 1 }}
         >
           <p>
-            Heya!
+            Hey there! <br />
+            I'm a technical professional focused on building business systems, enterprise workflows, and data-driven applications. <br />
+            I enjoy developing valuable solutions that improve operational processes, support decision-making, and combine technical problem solving with creativity and strategic thinking. <br />
             <br />
-            I'm an innovative Software Engineer and React.js lover.
+            My background started in software development and gradually evolved toward enterprise technologies, FP&A solutions, and operational systems. <br />
+            Alongside enterprise applications, I also love building independent software projects and experimenting with AI-powered tools and integrations. <br />
             <br />
-            I have a passion for developing unique WebApps which improve people's lives,
-            by blending my technical skills with my creative vision of things and personal passions.
-            <br />
-            Next.js is my favorite development environment, where I love having fun working with CRUD operations,
-            optimizing performance, managing state with React hooks, styling with Tailwind,
-            and exploring UI tools to craft intuitive and outstanding user experiences.
-            <br /> <br />
-            High performance? It's a must. The more creative? The better.
-            <br />
+            High performance? It's a must. The more creative? The better. <br />
             <br />
           </p>
           {bios.map((bio) => {

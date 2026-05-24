@@ -22,6 +22,7 @@ import {
   SiVercel,
   SiPrisma,
   SiTailwindcss,
+  SiOpenai,
 } from "react-icons/si";
 
 import rwsPolska from "../../../public/assets/images/rwspolska.png";
@@ -92,8 +93,8 @@ export const icons = [
   <SiMysql title="MySQL" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
-  <SiPrisma title="Prisma" />,
   <SiVercel title="Vercel" />,
+  <SiOpenai title="OpenAI" />,
 ];
 
 export const experiences = [
@@ -119,12 +120,12 @@ export const experiences = [
 export const finishes = [
   {
     id: 1,
-    number: "3+",
+    number: "4+",
     itemName: "Years Of Experience",
   },
   {
     id: 2,
-    number: "37",
+    number: "40",
     itemName: "Projects Completed",
   },
   {
