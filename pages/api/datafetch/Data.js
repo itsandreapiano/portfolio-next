@@ -1,5 +1,4 @@
 import {
-  FaCss3,
   FaReact,
   FaPhoneAlt,
   FaUser,
@@ -9,20 +8,16 @@ import {
   FaLinkedin,
   FaFacebook,
   FaGithub,
-  FaFigma,
-  FaHtml5,
+  FaCss3,
 } from "react-icons/fa";
 import Link from "next/link";
 import {
   SiTypescript,
-  SiJavascript,
-  SiNodedotjs,
   SiNextdotjs,
   SiMysql,
   SiVercel,
-  SiPrisma,
-  SiTailwindcss,
   SiOpenai,
+  SiAdobephotoshop,
 } from "react-icons/si";
 
 import rwsPolska from "../../../public/assets/images/rwspolska.png";
@@ -35,13 +30,6 @@ import istellas from "../../../public/assets/images/istellas.png";
 export const navLinks = ["home", "about", "skills", "work", "contact"];
 
 export const socialIcons = [
-  <Link
-    title="Facebook"
-    target="_blank"
-    href="https://www.facebook.com/itsandreapiano"
-  >
-    <FaFacebook />
-  </Link>,
   <Link
     title="Instagram"
     target="_blank"
@@ -83,35 +71,37 @@ export const bios = [
 ];
 
 export const icons = [
-  <FaHtml5 title="HTML5" />,
-  <FaCss3 title="CSS" />,
-  <SiTailwindcss title="Tailwind" />,
-  <FaFigma title="Figma" />,
-  <SiJavascript title="JavaScript" />,
+  <FaCss3 title="CSS3" />,
   <SiTypescript title="TypeScript" />,
-  <SiNodedotjs title="Node.js" />,
-  <SiMysql title="MySQL" />,
   <FaReact title="ReactJS" />,
   <SiNextdotjs title="Next.js" />,
   <SiVercel title="Vercel" />,
+  <SiMysql title="MySQL" />,
   <SiOpenai title="OpenAI" />,
+  <SiAdobephotoshop title="Adobe Photoshop" />,
 ];
 
 export const experiences = [
   {
     id: 1,
-    year: "2025",
-    position: "IT Analyst",
-    company: "CFO Solutions",
+    year: "2026",
+    position: "Digital Solutions Specialist",
+    company: "RWS Polska",
   },
   {
     id: 2,
+    year: "2025",
+    position: "IT Analyst",
+    company: "CFO Solutions LLC",
+  },
+  {
+    id: 3,
     year: "2024",
     position: "Frontend Engineer",
     company: "Bringer Agency (Fiverr)",
   },
   {
-    id: 3,
+    id: 4,
     year: "2022",
     position: "Frontend Developer",
     company: "Softfobia (Minsait)",
@@ -197,7 +187,7 @@ export const contacts = [
   {
     id: 2,
     icon: <FaPaperPlane />,
-    infoText: "dev.andrea.piano@gmail.com",
+    infoText: "itsandreapiano@gmail.com",
   },
   {
     id: 3,

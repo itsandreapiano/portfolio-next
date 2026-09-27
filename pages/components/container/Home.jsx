@@ -32,7 +32,7 @@ const Home = () => {
         <h3 className="name">
           Hi! I'm <span className="gradient-heading">Andrea Piano</span>{" "}
         </h3>
-        <span className="job">Business Systems & Software Solutions Developer</span>
+        <span className="job">Digital Solutions Professional</span>
 
         <section className="text-box">
           <span className="text">Don't worry,</span>
@@ -49,7 +49,7 @@ const Home = () => {
           Hire me
         </motion.a>
         <div className="uiDesign" href="#skills">
-          #FP&A
+          #digitalMarketing
         </div>
         <div className="reactJS"> #softwareSolutions</div>
         <div className="nextJS" href="#skills">

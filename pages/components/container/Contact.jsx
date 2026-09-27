@@ -148,7 +148,7 @@ const Contact = () => {
         >
           <h3>Contact me for a first interview</h3>
           <p className="contact_text">
-            Does your company operate remotely across Europe and plan to expand its tech team soon?
+            Does your company operate across Europe and plan to expand its tech team soon?
             Well, you might have just landed on the right page, at the right time.
             <br />
             Let’s connect and build something valuable together.

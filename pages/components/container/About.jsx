@@ -45,12 +45,10 @@ const About = () => {
         >
           <p>
             Hey there! <br />
-            I'm a technical professional focused on building business systems, enterprise workflows, and data-driven applications. <br />
-            I enjoy developing valuable solutions that improve operational processes, support decision-making, and combine technical problem solving with creativity and strategic thinking. <br />
+            I'm a technical professional focused on building digital solutions that connect software development, digital marketing, graphic design, and analytics. <br /><br />
+            I'm passionate about creating practical solutions that improve how businesses operate, strengthen their digital presence, and turn technology into real business value. <br />
             <br />
-            My background started in software development and gradually evolved toward enterprise technologies, FP&A solutions, and operational systems. <br />
-            Alongside enterprise applications, I also love building independent software projects and experimenting with AI-powered tools and integrations. <br />
-            <br />
+            My background started in software development and gradually expanded into broader digital ecosystems, from building and maintaining EPM solutions to creating digital media, monitoring analytics, and implementing AI-powered solutions. <br /><br />
             High performance? It's a must. The more creative? The better. <br />
             <br />
           </p>
