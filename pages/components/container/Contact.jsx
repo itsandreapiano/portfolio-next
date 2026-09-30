@@ -85,7 +85,7 @@ const Contact = () => {
       message: `<i>${message}</i>`,
       callToAction: {
         name: "",
-        href: "https://ateyapayo.app",
+        href: "https://www.andreapiano.dev",
         active: false,
       },
       conclusion: `You can contact <strong>${firstName}</strong> at the email: <strong>${email}</strong>.<br />
@@ -100,7 +100,7 @@ const Contact = () => {
       footer: {
         name: "Powered by",
         href: "www.andreapiano.dev",
-        message: "ateyapayo.dev",
+        message: "andreapiano.dev",
         active: true,
       },
     };
@@ -116,15 +116,20 @@ const Contact = () => {
       },
       body: JSON.stringify(emails),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Email submission failed");
+        }
+
+        return response.json();
+      })
       .then(() => {
         setEmailSent(true);
         clean();
       })
       .catch((error) => {
         console.error("Error:", error);
-        toast.error(JSON.stringify("Whoops, something went wrong! Try again."));
-        clean();
+        toast.error("There was an error sending your message. Please try again.");
       });
   };
 

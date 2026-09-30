@@ -1,23 +1,44 @@
-import sgMail from "@sendgrid/mail";
+import { BrevoClient } from "@getbrevo/brevo";
 import fillTemplate from "./template/fillTemplate.js";
 
-// Sendgrid api key
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const brevo = new BrevoClient({
+  apiKey: process.env.BREVO_API_KEY,
+});
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(405).json({
+      success: false,
+      error: "Method not allowed",
+    });
+  }
+
+  if (!process.env.BREVO_API_KEY) {
+    return res.status(500).json({
+      success: false,
+      error: "BREVO_API_KEY is not configured",
+    });
+  }
+
+  if (!process.env.ACCOUNT_EMAIL) {
+    return res.status(500).json({
+      success: false,
+      error: "ACCOUNT_EMAIL is not configured",
+    });
   }
 
   const { data } = req.body;
 
   if (!Array.isArray(data) || data.length === 0) {
-    return res.status(400).json({ error: "Invalid payload" });
+    return res.status(400).json({
+      success: false,
+      error: "Invalid payload",
+    });
   }
 
   try {
     const results = await Promise.all(
-      data.map((email) => {
+      data.map(async (email) => {
         const { from, subject, message, type } = email;
 
         if (!subject || !message || !type) {
@@ -26,15 +47,43 @@ export default async function handler(req, res) {
 
         const to = type === "greetings" ? from : process.env.ACCOUNT_EMAIL;
 
-        const fromEmail = process.env.ACCOUNT_EMAIL;
+        if (!to) {
+          throw new Error("Missing recipient email");
+        }
 
-        return sgMail.send({
+        console.log("EMAIL DEBUG:", {
+          type,
           to,
-          from: fromEmail,
+          sender: process.env.ACCOUNT_EMAIL,
           subject,
-          text: message,
-          html: fillTemplate(email),
         });
+
+        const result = await brevo.transactionalEmails.sendTransacEmail({
+          sender: {
+            email: process.env.ACCOUNT_EMAIL,
+          },
+
+          to: [
+            {
+              email: to,
+            },
+          ],
+
+          subject,
+
+          textContent: message,
+
+          htmlContent: fillTemplate(email),
+        });
+
+        console.log("BREVO SEND RESULT:", result);
+
+        return {
+          to,
+          subject,
+          messageId: result?.messageId || null,
+          result,
+        };
       }),
     );
 
@@ -44,18 +93,18 @@ export default async function handler(req, res) {
       results,
     });
   } catch (err) {
-    console.error("EMAIL API ERROR:", err);
+    console.error("BREVO EMAIL ERROR:", {
+      message: err?.message,
+      statusCode: err?.statusCode,
+      body: err?.body,
+      rawResponse: err?.rawResponse,
+    });
 
-    if (err.response && err.response.body && err.response.body.errors) {
-      return res.status(500).json({
-        success: false,
-        error: err.response.body.errors.map((e) => e.message).join(", "),
-      });
-    }
-
-    return res.status(500).json({
+    return res.status(err?.statusCode || 500).json({
       success: false,
-      error: err.message || "Email sending failed",
+      error: err?.body?.message || err?.message || "Email sending failed",
+      statusCode: err?.statusCode || 500,
+      details: err?.body || null,
     });
   }
 }
